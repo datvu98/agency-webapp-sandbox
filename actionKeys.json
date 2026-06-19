@@ -1,0 +1,94 @@
+[
+  {
+    "key": "customer_service_chat_action",
+    "router": "/chats",
+    "actions": [
+      "crmUpdateCustomer",
+      "conversationSendMessageV2",
+      "coUpdateOrderNote",
+      "conversationLabelUpdate",
+      "conversationLabelAdd",
+      "conversationMarkRead",
+      "saveManualOrder",
+      "conversationLabelRemove"
+    ],
+    "name": "Các thao tác ở màn danh sách trò chuyện",
+    "group_code": "customer_chat",
+    "group_name": "Trò chuyện",
+    "cate_code": "customer_service",
+    "cate_name": "Chăm sóc khách hàng"
+  },
+  {
+    "key": "customer_service_chat_label_create",
+    "router": "/chats",
+    "actions": ["conversationLabelCreate", "conversationLabelList"],
+    "name": "Thêm mới tag",
+    "group_code": "customer_chat",
+    "group_name": "Trò chuyện",
+    "cate_code": "customer_service",
+    "cate_name": "Chăm sóc khách hàng"
+  },
+  {
+    "key": "customer_service_chat_setting",
+    "router": "/settings/quick-message",
+    "actions": [
+      "chatTplMessageEnableSuggest",
+      "chatTplMessageGroups",
+      "chatTplMessageGroupCreateOrUpdate",
+      "chatTplMessageEnableSuggest",
+      "chatTplMessageGroupDelete"
+    ],
+    "name": "Cài đặt tin nhắn nhanh",
+    "group_code": "customer_chat",
+    "group_name": "Trò chuyện",
+    "cate_code": "customer_service",
+    "cate_name": "Chăm sóc khách hàng"
+  },
+  {
+    "key": "customer_service_chat_report",
+    "router": "/report",
+    "actions": [
+      "chatReportConversationDetail",
+      "chatReportLabelColumn",
+      "chatReportLabelBar",
+      "chatReportLabelDetail",
+      "chatReportOverviewTopLabels",
+      "chatReportOverviewIndex",
+      "chatReportOverviewRateOnTimeReponses",
+      "chatReportOverviewRateResponseTrend",
+      "chatReportConversationBar",
+      "chatReportConversationTrend"
+    ],
+    "name": "Báo cáo",
+    "group_code": "customer_chat",
+    "group_name": "Trò chuyện",
+    "cate_code": "customer_service",
+    "cate_name": "Chăm sóc khách hàng"
+  },
+  {
+    "key": "customer_service_chat_store_connect",
+    "router": "/setting/channels",
+    "actions": [
+      "sc_conversation_stores",
+      "op_connector_channels",
+      "scConversationAuthorizationUrl",
+      "scConversationAuthorizationCancel",
+      "scConversationAuthorizationGrant"
+    ],
+    "name": "Xem danh sách gian hàng kết nối",
+    "group_code": "customer_chat",
+    "group_name": "Trò chuyện",
+    "cate_code": "customer_service",
+    "cate_name": "Chăm sóc khách hàng"
+  },
+  {
+    "key": "customer_service_chat_store_create",
+    "router": "",
+    "actions": [],
+    "name": "Thêm gian hàng chat",
+    "group_code": "customer_chat",
+    "group_name": "Trò chuyện",
+    "cate_code": "customer_service",
+    "cate_name": "Chăm sóc khách hàng"
+  }
+]

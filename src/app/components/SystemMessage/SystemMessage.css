@@ -1,0 +1,28 @@
+.rce-container-smsg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rce-smsg {
+  position: relative;
+  background: white;
+  opacity: 0.5;
+  color: #000000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px #e9e9e9;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0px;
+  padding: 6px 12px 6px 12px;
+  float: left;
+  max-width: 70%;
+  align-items: center;
+  justify-content: center;
+}
+
+.rce-smsg-text {
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+}

@@ -1,0 +1,15 @@
+{
+  "change": "inventory-counting-in-list-flag",
+  "phase": "design",
+  "mode": "compact",
+  "canonical_spec": "openspec",
+  "generated_by": "comet-handoff.sh",
+  "context_hash": "f00f1dbe32da6d76cb2b2cd2d27b8eb616f82f6f1f05fb84b133d0a2bd7e5a6b",
+  "files": [
+    { "path": "openspec/changes/inventory-counting-in-list-flag/proposal.md", "sha256": "93912a6735bb7ccdb495cdcd68b0b231a01b6757fdf3bb3073836b4a42809f05" },
+    { "path": "openspec/changes/inventory-counting-in-list-flag/design.md", "sha256": "0279320c5065a668231fb34fa9b1b600c0ef26fb42817f6a0db2c4b5517b3d04" },
+    { "path": "openspec/changes/inventory-counting-in-list-flag/tasks.md", "sha256": "b2735edecc5b60ce70495a6507c033888ad31a77edb91a72855cc10f5e05f223" },
+    { "path": "openspec/changes/inventory-counting-in-list-flag/specs/inventory-counting-location-in-list-ui/spec.md", "sha256": "ce0f65ba4986ee1832d05d531e87629623bcd84b28816762cbb5b0873225b572" },
+    { "path": "openspec/changes/inventory-counting-in-list-flag/specs/inventory-counting-variant-in-list-ui/spec.md", "sha256": "da253b07dfe2357e07b41f336dc46a6c619894e6442f2491dbd465d2392cdef5" }
+  ]
+}

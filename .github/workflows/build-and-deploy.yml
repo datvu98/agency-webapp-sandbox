@@ -1,0 +1,54 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - ".github/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    permissions:
+      id-token: write
+      contents: read
+    uses: UpBase-Tech/gha-workflows/.github/workflows/build-ecr.yml@main
+    with:
+      docker-image-name: upbase/agency-webapp
+      build-args: | 
+        REACT_APP_MODE=STAG
+        REACT_APP_ONESIGNAL_APP_ID=05d620d3-4c28-4f7e-a565-f0404811bf57
+        REACT_APP_SME_ENDPOINT=https://ups.staging.upbase.asia
+        REACT_APP_GRAPHQL_ENDPOINT=https://agency-api.staging.upbase.asia/v1/graphql
+        REACT_APP_GRAPHQL_WS_ENDPOINT=wss://chat-system.staging.upbase.asia/graphql
+        REACT_APP_URL_FILE_UPLOAD=https://ulti.staging.upbase.asia/files/upload
+        REACT_APP_CHATTING_SOCKET_URL=https://chat-system.staging.upbase.asia/
+        REACT_APP_VERSION=v.${{ github.sha }}
+
+  upload:
+    needs: [build]
+    permissions:
+      id-token: write
+      contents: read
+    uses: UpBase-Tech/gha-workflows/.github/workflows/docker-to-s3.yml@main
+    with:
+      s3-acl: public-read
+      image: ${{ needs.build.outputs.image-full-path }}
+      role-arn: arn:aws:iam::383790499350:role/GithubS3CloudfrontDeployerNP
+      # Example: /usr/share/nginx/html:s3://upbase-webapp
+      folder-mappings: |
+        /app/build:s3://staging-agency
+
+  invalidate:
+    needs: [upload]
+    permissions:
+      id-token: write
+      contents: read
+    uses: UpBase-Tech/gha-workflows/.github/workflows/invalidate-cloudfront.yml@main
+    with:
+      distribution-id: E3UHLQW2QMSFT
+      role-arn: arn:aws:iam::383790499350:role/GithubS3CloudfrontDeployerNP
+      # Example: /* or /index.html
+      paths: |
+        /index.html

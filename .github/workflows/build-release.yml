@@ -1,0 +1,26 @@
+name: Build Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    permissions:
+      id-token: write
+      contents: read
+    uses: UpBase-Tech/gha-workflows/.github/workflows/build-ecr.yml@main
+    with:
+      docker-image-name: upbase/agency-webapp
+      build-args: | 
+        REACT_APP_MODE=PROD
+        REACT_APP_SME_ENDPOINT=https://ups.upbase.asia
+        REACT_APP_ONESIGNAL_APP_ID=a7a483ce-098e-4d75-8499-3bdd51accb96
+        REACT_APP_GRAPHQL_ENDPOINT=https://agency-api.upbase.asia/v1/graphql
+        REACT_APP_GRAPHQL_WS_ENDPOINT=wss://chat-system.upbase.asia/graphql
+        REACT_APP_URL_FILE_UPLOAD=https://util.upbase.asia/files/upload
+        REACT_APP_CHATTING_SOCKET_URL=https://socket.upbase.asia/
+        REACT_APP_GA_ID=G-2J13F3VXQG
+        REACT_APP_SENTRY_URL=https://710e538efc0b4ceb9c4cacc4cb54f9a1@o4504169513680896.ingest.sentry.io/4504248631623680
+        REACT_APP_VERSION=v.${{ github.sha }}

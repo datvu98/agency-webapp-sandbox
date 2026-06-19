@@ -1,0 +1,13 @@
+name: Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    permissions:
+      id-token: write
+      contents: read
+    uses: UpBase-Tech/gha-workflows/.github/workflows/build-ecr.yml@main
+    with:
+      docker-image-name: upbase/agency-webapp

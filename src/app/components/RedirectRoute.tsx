@@ -1,0 +1,19 @@
+/*
+ * Created by duydatpham@gmail.com on 25/05/2023
+ * Copyright (c) 2023 duydatpham@gmail.com
+ */
+import { selectGlobalSlice } from "app/slice/selectors";
+import React, { memo } from "react";
+import { Navigate, useLocation } from "react-router-dom";
+
+export default memo(({ children }: { children: JSX.Element }) => {
+    const accessToken = localStorage.getItem('accessToken');
+
+    // if (!!accessToken) {
+    //     return <Navigate to="/" replace />;
+    // } else {
+    //     return children;
+    // }
+
+    return children
+})

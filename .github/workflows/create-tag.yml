@@ -1,0 +1,28 @@
+name: Create Tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: Version bump type — major, minor, or patch (ignored when tag-override is set)
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+        default: patch
+      tag-override:
+        description: Override the computed tag (e.g. v1.2.3, v1.2.3-rc.1). Takes precedence over bump.
+        type: string
+        required: false
+        default: ""
+
+jobs:
+  create-tag:
+    permissions:
+      id-token: write
+      contents: write
+    uses: UpBase-Tech/gha-workflows/.github/workflows/create-tag.yml@main
+    with:
+      bump: ${{ inputs.bump }}
+      tag-override: ${{ inputs.tag-override }}

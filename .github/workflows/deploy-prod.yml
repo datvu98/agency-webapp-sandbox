@@ -1,0 +1,30 @@
+name: Deploy Prod
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    permissions:
+      id-token: write
+      contents: read
+    uses: UpBase-Tech/gha-workflows/.github/workflows/docker-to-s3.yml@main
+    with:
+      s3-acl: public-read
+      image: 383790499350.dkr.ecr.ap-southeast-1.amazonaws.com/upbase/agency-webapp:${{ github.ref_name }}
+      role-arn: arn:aws:iam::383790499350:role/GithubS3CloudfrontDeployerProd
+      # Example: /usr/share/nginx/html:s3://prod-webapp
+      folder-mappings: |
+        /app/build:s3://prod-agency
+  invalidate:
+    needs: [upload]
+    permissions:
+      id-token: write
+      contents: read
+    uses: UpBase-Tech/gha-workflows/.github/workflows/invalidate-cloudfront.yml@main
+    with:
+      distribution-id: E1HDRLHR4S075H
+      role-arn: arn:aws:iam::383790499350:role/GithubS3CloudfrontDeployerProd
+      # Example: /* or /index.html
+      paths: |
+        /index.html
