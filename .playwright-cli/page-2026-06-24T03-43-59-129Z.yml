@@ -1,0 +1,257 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - img [ref=e8]
+    - generic [ref=e11] [cursor=pointer]:
+      - generic [ref=e12]:
+        - img "avatar" [ref=e14]
+        - superscript [ref=e15]
+      - generic [ref=e16]: huy@upbase.vn
+  - generic [ref=e17]:
+    - complementary [ref=e18]:
+      - generic [ref=e19]:
+        - menu [ref=e20]:
+          - menuitem "line-chart Báo cáo" [ref=e21] [cursor=pointer]:
+            - img "line-chart" [ref=e22]:
+              - img [ref=e23]
+            - generic [ref=e25]: Báo cáo
+          - menuitem "login Kiểm kê" [ref=e26] [cursor=pointer]:
+            - img "login" [ref=e27]:
+              - img [ref=e28]
+            - generic [ref=e30]: Kiểm kê
+          - menuitem "shop Quản lý kho" [ref=e31] [cursor=pointer]:
+            - img "shop" [ref=e32]:
+              - img [ref=e33]
+            - generic [ref=e35]: Quản lý kho
+          - menuitem "login Vận hành nhập" [ref=e36] [cursor=pointer]:
+            - img "login" [ref=e37]:
+              - img [ref=e38]
+            - generic [ref=e40]: Vận hành nhập
+          - menuitem "logout Vận hành xuất" [ref=e41] [cursor=pointer]:
+            - img "logout" [ref=e42]:
+              - img [ref=e43]
+            - generic [ref=e45]: Vận hành xuất
+          - menuitem "setting Quản lý tài khoản" [ref=e46] [cursor=pointer]:
+            - img "setting" [ref=e47]:
+              - img [ref=e48]
+            - generic [ref=e50]: Quản lý tài khoản
+        - generic [ref=e51]:
+          - text: "Phiên bản:"
+          - strong
+        - button "menu-fold" [ref=e52] [cursor=pointer]:
+          - img "menu-fold" [ref=e54]:
+            - img [ref=e55]
+    - main [ref=e57]:
+      - generic [ref=e60]:
+        - generic [ref=e63]:
+          - generic [ref=e64] [cursor=pointer]:
+            - radio "Phiên bản 1"
+            - generic "Phiên bản 1" [ref=e65]
+          - generic [ref=e66] [cursor=pointer]:
+            - radio "Phiên bản 2"
+            - generic "Phiên bản 2" [ref=e67]
+          - generic [ref=e68] [cursor=pointer]:
+            - radio "Phiên bản 3" [checked] [active]
+            - generic "Phiên bản 3" [ref=e69]
+        - generic [ref=e169]:
+          - generic [ref=e172]:
+            - generic [ref=e174]:
+              - generic [ref=e175]: Thời gian
+              - generic [ref=e178]:
+                - textbox "Ngày bắt đầu" [ref=e180]: 26/05/2026 00:00
+                - generic "to" [ref=e182]:
+                  - img "swap-right" [ref=e183]:
+                    - img [ref=e184]
+                - textbox "Ngày kết thúc" [ref=e187]: 24/06/2026 23:59
+                - generic:
+                  - img "calendar":
+                    - img
+                - button "close-circle" [ref=e188] [cursor=pointer]:
+                  - img "close-circle" [ref=e189]:
+                    - img [ref=e190]
+            - generic [ref=e193]:
+              - generic [ref=e194]: UpS
+              - generic [ref=e197] [cursor=pointer]:
+                - generic [ref=e198]:
+                  - combobox [ref=e202]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e204]:
+              - generic [ref=e205]: Nguồn phát sinh
+              - generic [ref=e208] [cursor=pointer]:
+                - generic [ref=e209]:
+                  - combobox [ref=e213]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e215]:
+              - generic [ref=e216]: Sàn
+              - generic [ref=e219] [cursor=pointer]:
+                - generic [ref=e220]:
+                  - combobox [ref=e224]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e226]:
+              - generic [ref=e227]: Gian hàng
+              - generic [ref=e230] [cursor=pointer]:
+                - generic [ref=e231]:
+                  - combobox [ref=e235]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e237]:
+              - generic [ref=e238]: Trạng thái hợp đồng
+              - generic [ref=e241] [cursor=pointer]:
+                - generic [ref=e242]:
+                  - combobox [ref=e244]
+                  - generic "Đang hợp tác" [ref=e245]
+                - generic:
+                  - img:
+                    - img
+          - generic [ref=e247]:
+            - strong [ref=e249]: Biểu đồ xu hướng
+            - generic [ref=e253]:
+              - generic [ref=e257] [cursor=pointer]:
+                - generic [ref=e258]:
+                  - generic [ref=e259]: GMV sàn
+                  - img "info-circle" [ref=e261]:
+                    - img [ref=e262]
+                - paragraph [ref=e265]: "0"
+                - generic [ref=e266]:
+                  - generic [ref=e267]: So với kì trước
+                  - generic [ref=e268]: "--"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: GMV nhà bán
+                        - generic:
+                          - img:
+                            - img
+                      - paragraph: "0"
+                      - generic:
+                        - generic: So với kì trước
+                        - generic: "--"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: NMV (Doanh số hiệu quả)
+                        - generic:
+                          - img:
+                            - img
+                      - paragraph: "0"
+                      - generic:
+                        - generic: So với kì trước
+                        - generic: "--"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Đơn hàng
+                        - generic:
+                          - img:
+                            - img
+                      - paragraph: "0"
+                      - generic:
+                        - generic: So với kì trước
+                        - generic: "--"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Đơn hàng hiệu quả
+                        - generic:
+                          - img:
+                            - img
+                      - paragraph: "0"
+                      - generic:
+                        - generic: So với kì trước
+                        - generic: "--"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: AOV
+                        - generic:
+                          - img:
+                            - img
+                      - paragraph: "0"
+                      - generic:
+                        - generic: So với kì trước
+                        - generic: "--"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Số đơn hủy
+                        - generic:
+                          - img:
+                            - img
+                      - paragraph: "0"
+                      - generic:
+                        - generic: So với kì trước
+                        - generic: "--"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Doanh số hủy nhà bán
+                        - generic:
+                          - img:
+                            - img
+                      - paragraph: "0"
+                      - generic:
+                        - generic: So với kì trước
+                        - generic: "--"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Số đơn hoàn
+                        - generic:
+                          - img:
+                            - img
+                      - paragraph: "0"
+                      - generic:
+                        - generic: So với kì trước
+                        - generic: "--"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Doanh số hoàn nhà bán
+                        - generic:
+                          - img:
+                            - img
+                      - paragraph: "0"
+                      - generic:
+                        - generic: So với kì trước
+                        - generic: "--"
+            - button "right" [ref=e269] [cursor=pointer]:
+              - img "right" [ref=e270]:
+                - img [ref=e271]
+          - generic [ref=e275]:
+            - generic [ref=e276]: Báo cáo chi tiết
+            - generic [ref=e278]:
+              - strong [ref=e281]: Số liệu chi tiết
+              - generic [ref=e282]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                    - generic: Chưa có dữ liệu

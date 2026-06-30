@@ -1,0 +1,324 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e68]:
+      - banner [ref=e69]:
+        - img [ref=e72]
+        - generic [ref=e75] [cursor=pointer]:
+          - generic [ref=e76]:
+            - img "avatar" [ref=e78]
+            - superscript [ref=e79]
+          - generic [ref=e80]: huy@upbase.vn
+      - generic [ref=e81]:
+        - complementary [ref=e82]:
+          - generic [ref=e83]:
+            - menu [ref=e84]:
+              - menuitem "line-chart Báo cáo" [ref=e85] [cursor=pointer]:
+                - img "line-chart" [ref=e86]:
+                  - img [ref=e87]
+                - generic [ref=e89]: Báo cáo
+              - menuitem "login Kiểm kê" [ref=e90] [cursor=pointer]:
+                - img "login" [ref=e91]:
+                  - img [ref=e92]
+                - generic [ref=e94]: Kiểm kê
+              - menuitem "shop Quản lý kho" [ref=e95] [cursor=pointer]:
+                - img "shop" [ref=e96]:
+                  - img [ref=e97]
+                - generic [ref=e99]: Quản lý kho
+              - menuitem "login Vận hành nhập" [ref=e100] [cursor=pointer]:
+                - img "login" [ref=e101]:
+                  - img [ref=e102]
+                - generic [ref=e104]: Vận hành nhập
+              - menuitem "logout Vận hành xuất" [ref=e105] [cursor=pointer]:
+                - img "logout" [ref=e106]:
+                  - img [ref=e107]
+                - generic [ref=e109]: Vận hành xuất
+              - menuitem "setting Quản lý tài khoản" [ref=e110] [cursor=pointer]:
+                - img "setting" [ref=e111]:
+                  - img [ref=e112]
+                - generic [ref=e114]: Quản lý tài khoản
+            - generic [ref=e115]:
+              - text: "Phiên bản:"
+              - strong
+            - button "menu-fold" [ref=e116] [cursor=pointer]:
+              - img "menu-fold" [ref=e118]:
+                - img [ref=e119]
+        - main [ref=e121]:
+          - generic [ref=e125]:
+            - navigation [ref=e126]:
+              - list [ref=e127]:
+                - listitem [ref=e128]:
+                  - link "Cấu hình" [ref=e129] [cursor=pointer]:
+                    - /url: /settings
+                - listitem [ref=e130]: ">"
+                - listitem [ref=e131]:
+                  - link "Quản lý UpS" [ref=e132] [cursor=pointer]:
+                    - /url: /settings/smes
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - generic [ref=e140]: Tên gian hàng
+                - generic [ref=e142]:
+                  - textbox "Nhập tên nhãn hàng hoặc tên gian hàng" [ref=e143]
+                  - button "search" [ref=e145] [cursor=pointer]:
+                    - img "search" [ref=e147]:
+                      - img [ref=e148]
+              - generic [ref=e152]:
+                - generic [ref=e154]:
+                  - table [ref=e156]:
+                    - rowgroup [ref=e162]:
+                      - row "Thông tin tài khoản UpS Thông tin gian hàng Thời gian kết nối Thao tác" [ref=e163]:
+                        - columnheader "Thông tin tài khoản UpS" [ref=e164]
+                        - columnheader "Thông tin gian hàng" [ref=e165]
+                        - columnheader "Thời gian kết nối" [ref=e166]
+                        - columnheader "Thao tác" [ref=e167]
+                  - table [ref=e169]:
+                    - rowgroup [ref=e175]:
+                      - 'row "Upbase (164) Gian hàng: 9 gian hàng Gian hàng chat: 6 gian hàng chat 05/09/2024 22:38 Truy cập UpS|Quản lý hợp đồng" [ref=e176]':
+                        - cell "Upbase (164)" [ref=e177]
+                        - 'cell "Gian hàng: 9 gian hàng Gian hàng chat: 6 gian hàng chat" [ref=e178]':
+                          - generic [ref=e179]:
+                            - generic [ref=e180]: "Gian hàng:"
+                            - generic [ref=e181]: 9 gian hàng
+                          - generic [ref=e182]:
+                            - generic [ref=e183]: "Gian hàng chat:"
+                            - generic [ref=e184]: 6 gian hàng chat
+                        - cell "05/09/2024 22:38" [ref=e185]:
+                          - generic [ref=e186]: 05/09/2024 22:38
+                        - cell "Truy cập UpS|Quản lý hợp đồng" [ref=e187]
+                      - 'row "Vũ Thị Minh Thư (856) Gian hàng: 0 gian hàng Gian hàng chat: 0 gian hàng chat 26/12/2025 16:52 Truy cập UpS|Quản lý hợp đồng" [ref=e188]':
+                        - cell "Vũ Thị Minh Thư (856)" [ref=e189]
+                        - 'cell "Gian hàng: 0 gian hàng Gian hàng chat: 0 gian hàng chat" [ref=e190]':
+                          - generic [ref=e191]:
+                            - generic [ref=e192]: "Gian hàng:"
+                            - generic [ref=e193]: 0 gian hàng
+                          - generic [ref=e194]:
+                            - generic [ref=e195]: "Gian hàng chat:"
+                            - generic [ref=e196]: 0 gian hàng chat
+                        - cell "26/12/2025 16:52" [ref=e197]:
+                          - generic [ref=e198]: 26/12/2025 16:52
+                        - cell "Truy cập UpS|Quản lý hợp đồng" [ref=e199]
+                      - 'row "Ekseption (160) Gian hàng: 19 gian hàng Gian hàng chat: 12 gian hàng chat 05/09/2024 22:38 Truy cập UpS|Quản lý hợp đồng" [ref=e200]':
+                        - cell "Ekseption (160)" [ref=e201]
+                        - 'cell "Gian hàng: 19 gian hàng Gian hàng chat: 12 gian hàng chat" [ref=e202]':
+                          - generic [ref=e203]:
+                            - generic [ref=e204]: "Gian hàng:"
+                            - generic [ref=e205]: 19 gian hàng
+                          - generic [ref=e206]:
+                            - generic [ref=e207]: "Gian hàng chat:"
+                            - generic [ref=e208]: 12 gian hàng chat
+                        - cell "05/09/2024 22:38" [ref=e209]:
+                          - generic [ref=e210]: 05/09/2024 22:38
+                        - cell "Truy cập UpS|Quản lý hợp đồng" [ref=e211]
+                      - 'row "UB.Fulfillment@gmail.com (279) Gian hàng: 8 gian hàng Gian hàng chat: 0 gian hàng chat 23/05/2025 10:10 Truy cập UpS|Quản lý hợp đồng" [ref=e212]':
+                        - cell "UB.Fulfillment@gmail.com (279)" [ref=e213]
+                        - 'cell "Gian hàng: 8 gian hàng Gian hàng chat: 0 gian hàng chat" [ref=e214]':
+                          - generic [ref=e215]:
+                            - generic [ref=e216]: "Gian hàng:"
+                            - generic [ref=e217]: 8 gian hàng
+                          - generic [ref=e218]:
+                            - generic [ref=e219]: "Gian hàng chat:"
+                            - generic [ref=e220]: 0 gian hàng chat
+                        - cell "23/05/2025 10:10" [ref=e221]:
+                          - generic [ref=e222]: 23/05/2025 10:10
+                        - cell "Truy cập UpS|Quản lý hợp đồng" [ref=e223]
+                      - 'row "Công ty A (323) Gian hàng: 1 gian hàng Gian hàng chat: 0 gian hàng chat 23/05/2025 10:11 Truy cập UpS|Quản lý hợp đồng" [ref=e224]':
+                        - cell "Công ty A (323)" [ref=e225]
+                        - 'cell "Gian hàng: 1 gian hàng Gian hàng chat: 0 gian hàng chat" [ref=e226]':
+                          - generic [ref=e227]:
+                            - generic [ref=e228]: "Gian hàng:"
+                            - generic [ref=e229]: 1 gian hàng
+                          - generic [ref=e230]:
+                            - generic [ref=e231]: "Gian hàng chat:"
+                            - generic [ref=e232]: 0 gian hàng chat
+                        - cell "23/05/2025 10:11" [ref=e233]:
+                          - generic [ref=e234]: 23/05/2025 10:11
+                        - cell "Truy cập UpS|Quản lý hợp đồng" [ref=e235]
+                      - 'row "Thắng Vũ (387) Gian hàng: 3 gian hàng Gian hàng chat: 0 gian hàng chat 27/03/2026 11:25 Truy cập UpS|Quản lý hợp đồng" [ref=e236]':
+                        - cell "Thắng Vũ (387)" [ref=e237]
+                        - 'cell "Gian hàng: 3 gian hàng Gian hàng chat: 0 gian hàng chat" [ref=e238]':
+                          - generic [ref=e239]:
+                            - generic [ref=e240]: "Gian hàng:"
+                            - generic [ref=e241]: 3 gian hàng
+                          - generic [ref=e242]:
+                            - generic [ref=e243]: "Gian hàng chat:"
+                            - generic [ref=e244]: 0 gian hàng chat
+                        - cell "27/03/2026 11:25" [ref=e245]:
+                          - generic [ref=e246]: 27/03/2026 11:25
+                        - cell "Truy cập UpS|Quản lý hợp đồng" [ref=e247]
+                      - 'row "edmaillan1@uu.uu (207) Gian hàng: 0 gian hàng Gian hàng chat: 0 gian hàng chat 26/12/2025 16:35 Truy cập UpS|Quản lý hợp đồng" [ref=e248]':
+                        - cell "edmaillan1@uu.uu (207)" [ref=e249]
+                        - 'cell "Gian hàng: 0 gian hàng Gian hàng chat: 0 gian hàng chat" [ref=e250]':
+                          - generic [ref=e251]:
+                            - generic [ref=e252]: "Gian hàng:"
+                            - generic [ref=e253]: 0 gian hàng
+                          - generic [ref=e254]:
+                            - generic [ref=e255]: "Gian hàng chat:"
+                            - generic [ref=e256]: 0 gian hàng chat
+                        - cell "26/12/2025 16:35" [ref=e257]:
+                          - generic [ref=e258]: 26/12/2025 16:35
+                        - cell "Truy cập UpS|Quản lý hợp đồng" [ref=e259]
+                      - 'row "THI TO UYEN NGUYEN (161) Gian hàng: 1 gian hàng Gian hàng chat: 0 gian hàng chat 28/12/2025 15:30 Truy cập UpS|Quản lý hợp đồng" [ref=e260]':
+                        - cell "THI TO UYEN NGUYEN (161)" [ref=e261]
+                        - 'cell "Gian hàng: 1 gian hàng Gian hàng chat: 0 gian hàng chat" [ref=e262]':
+                          - generic [ref=e263]:
+                            - generic [ref=e264]: "Gian hàng:"
+                            - generic [ref=e265]: 1 gian hàng
+                          - generic [ref=e266]:
+                            - generic [ref=e267]: "Gian hàng chat:"
+                            - generic [ref=e268]: 0 gian hàng chat
+                        - cell "28/12/2025 15:30" [ref=e269]:
+                          - generic [ref=e270]: 28/12/2025 15:30
+                        - cell "Truy cập UpS|Quản lý hợp đồng" [ref=e271]
+                      - 'row "uyenlan2@uu.uu (208) Gian hàng: 1 gian hàng Gian hàng chat: 0 gian hàng chat 26/12/2025 16:50 Truy cập UpS|Quản lý hợp đồng" [ref=e272]':
+                        - cell "uyenlan2@uu.uu (208)" [ref=e273]
+                        - 'cell "Gian hàng: 1 gian hàng Gian hàng chat: 0 gian hàng chat" [ref=e274]':
+                          - generic [ref=e275]:
+                            - generic [ref=e276]: "Gian hàng:"
+                            - generic [ref=e277]: 1 gian hàng
+                          - generic [ref=e278]:
+                            - generic [ref=e279]: "Gian hàng chat:"
+                            - generic [ref=e280]: 0 gian hàng chat
+                        - cell "26/12/2025 16:50" [ref=e281]:
+                          - generic [ref=e282]: 26/12/2025 16:50
+                        - cell "Truy cập UpS|Quản lý hợp đồng" [ref=e283]
+                - list [ref=e284]:
+                  - listitem [ref=e285]: Hiển thị 1-9 của 9
+                  - listitem "Trang Trước" [ref=e286]:
+                    - button "left" [disabled] [ref=e287]:
+                      - img "left" [ref=e288]:
+                        - img [ref=e289]
+                  - listitem "1" [ref=e291] [cursor=pointer]:
+                    - generic [ref=e292]: "1"
+                  - listitem "Trang Kế" [ref=e293]:
+                    - button "right" [disabled] [ref=e294]:
+                      - img "right" [ref=e295]:
+                        - img [ref=e296]
+    - generic [ref=e299] [cursor=pointer]:
+      - alert [ref=e300]:
+        - img [ref=e302]
+        - paragraph [ref=e305]: Đăng nhập thành công.
+      - button "close" [ref=e306]:
+        - img [ref=e307]
+      - progressbar "notification timer" [ref=e309]
+  - tooltip "Thông tin gian hàng chat eye Xem trước upbasetest02 warning eye Xem trước SPLAT Official Store check-circle eye Xem trước BaoBaoShop04 check-circle eye Xem trước UU_2u warning eye Xem trước UU_shop warning eye Xem trước Quà lưu niệm check-circle eye Xem trước MyChu21 warning eye Xem trước Món đồ xíu xiu check-circle eye Xem trước Tạp hóa MeMe check-circle eye Xem trước Đồ Lưu niệm check-circle eye Xem trước Ở đây có quà check-circle eye Xem trước UpBeauty check-circle" [ref=e312]:
+    - generic [ref=e313]: Thông tin gian hàng chat
+    - generic [ref=e315]:
+      - generic [ref=e316]:
+        - generic [ref=e317]:
+          - img [ref=e318]
+          - generic [ref=e320] [cursor=pointer]:
+            - img "eye" [ref=e321]:
+              - img [ref=e322]
+            - text: Xem trước
+        - generic [ref=e324]: upbasetest02
+        - img "warning" [ref=e325]:
+          - img [ref=e326]
+      - generic [ref=e328]:
+        - generic [ref=e329]:
+          - img [ref=e330]
+          - generic [ref=e332] [cursor=pointer]:
+            - img "eye" [ref=e333]:
+              - img [ref=e334]
+            - text: Xem trước
+        - generic [ref=e336]: SPLAT Official Store
+        - img "check-circle" [ref=e337]:
+          - img [ref=e338]
+      - generic [ref=e340]:
+        - generic [ref=e341]:
+          - img [ref=e342]
+          - generic [ref=e344] [cursor=pointer]:
+            - img "eye" [ref=e345]:
+              - img [ref=e346]
+            - text: Xem trước
+        - generic [ref=e348]: BaoBaoShop04
+        - img "check-circle" [ref=e349]:
+          - img [ref=e350]
+      - generic [ref=e352]:
+        - generic [ref=e353]:
+          - img [ref=e354]
+          - generic [ref=e356] [cursor=pointer]:
+            - img "eye" [ref=e357]:
+              - img [ref=e358]
+            - text: Xem trước
+        - generic [ref=e360]: UU_2u
+        - img "warning" [ref=e361]:
+          - img [ref=e362]
+      - generic [ref=e364]:
+        - generic [ref=e365]:
+          - img [ref=e366]
+          - generic [ref=e368] [cursor=pointer]:
+            - img "eye" [ref=e369]:
+              - img [ref=e370]
+            - text: Xem trước
+        - generic [ref=e372]: UU_shop
+        - img "warning" [ref=e373]:
+          - img [ref=e374]
+      - generic [ref=e376]:
+        - generic [ref=e377]:
+          - img [ref=e378]
+          - generic [ref=e380] [cursor=pointer]:
+            - img "eye" [ref=e381]:
+              - img [ref=e382]
+            - text: Xem trước
+        - generic [ref=e384]: Quà lưu niệm
+        - img "check-circle" [ref=e385]:
+          - img [ref=e386]
+      - generic [ref=e388]:
+        - generic [ref=e389]:
+          - img [ref=e390]
+          - generic [ref=e392] [cursor=pointer]:
+            - img "eye" [ref=e393]:
+              - img [ref=e394]
+            - text: Xem trước
+        - generic [ref=e396]: MyChu21
+        - img "warning" [ref=e397]:
+          - img [ref=e398]
+      - generic [ref=e400]:
+        - generic [ref=e401]:
+          - img [ref=e402]
+          - generic [ref=e404] [cursor=pointer]:
+            - img "eye" [ref=e405]:
+              - img [ref=e406]
+            - text: Xem trước
+        - generic [ref=e408]: Món đồ xíu xiu
+        - img "check-circle" [ref=e409]:
+          - img [ref=e410]
+      - generic [ref=e412]:
+        - generic [ref=e413]:
+          - img [ref=e414]
+          - generic [ref=e416] [cursor=pointer]:
+            - img "eye" [ref=e417]:
+              - img [ref=e418]
+            - text: Xem trước
+        - generic [ref=e420]: Tạp hóa MeMe
+        - img "check-circle" [ref=e421]:
+          - img [ref=e422]
+      - generic [ref=e424]:
+        - generic [ref=e425]:
+          - img [ref=e426]
+          - generic [ref=e428] [cursor=pointer]:
+            - img "eye" [ref=e429]:
+              - img [ref=e430]
+            - text: Xem trước
+        - generic [ref=e432]: Đồ Lưu niệm
+        - img "check-circle" [ref=e433]:
+          - img [ref=e434]
+      - generic [ref=e436]:
+        - generic [ref=e437]:
+          - img [ref=e438]
+          - generic [ref=e440] [cursor=pointer]:
+            - img "eye" [ref=e441]:
+              - img [ref=e442]
+            - text: Xem trước
+        - generic [ref=e444]: Ở đây có quà
+        - img "check-circle" [ref=e445]:
+          - img [ref=e446]
+      - generic [ref=e448]:
+        - generic [ref=e449]:
+          - img [ref=e450]
+          - generic [ref=e452] [cursor=pointer]:
+            - img "eye" [ref=e453]:
+              - img [ref=e454]
+            - text: Xem trước
+        - generic [ref=e456]: UpBeauty
+        - img "check-circle" [ref=e457]:
+          - img [ref=e458]

@@ -1,0 +1,172 @@
+[     590ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:511174
+[     667ms] [LOG] i18next: languageChanged vi-VN @ http://localhost:3000/static/js/bundle.js:577484
+[     667ms] [LOG] i18next: initialized {debug: true, initImmediate: true, ns: Array(1), defaultNS: Array(1), fallbackLng: Array(1)} @ http://localhost:3000/static/js/bundle.js:577484
+[     669ms] [LOG] THIEN CHECKED @ http://localhost:3000/static/js/bundle.js:144601
+[   10595ms] [LOG] Download the Apollo DevTools for a better development experience: %s https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm @ http://localhost:3000/static/js/bundle.js:553180
+[   11180ms] [ERROR] Warning: [antd: Dropdown] `overlay` is deprecated. Please use `menu` instead. @ http://localhost:3000/static/js/bundle.js:483634
+[   11185ms] [LOG] {} @ http://localhost:3000/static/js/bundle.js:54512
+[   11214ms] [LOG] {} @ http://localhost:3000/static/js/bundle.js:54512
+[   11243ms] [ERROR] Warning: [antd: Breadcrumb] `Breadcrumb.Item and Breadcrumb.Separator` is deprecated. Please use `items` instead. @ http://localhost:3000/static/js/bundle.js:483634
+[   11310ms] [LOG] {__typename: UserMeOutput, agencyId: 3, avatar_url: https://d3plrvcei1qcpw.cloudfront.net/file/2a7959e9-b172-4ab6-8a40-63be772ef0fa.jpg, business_model: null, email: huy@upbase.vn} @ http://localhost:3000/static/js/bundle.js:54512
+[   11729ms] [ERROR] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `Body`.  
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:317350:7)
+    at Body (http://localhost:3000/static/js/bundle.js:470455:70)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:317350:7)
+    at table
+    at div
+    at div
+    at div
+    at Provider (http://localhost:3000/static/js/bundle.js:317395:22)
+    at Table (http://localhost:3000/static/js/bundle.js:471642:58)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:317316:63)
+    at div
+    at div
+    at Spin (http://localhost:3000/static/js/bundle.js:364719:18)
+    at div
+    at InternalTable (http://localhost:3000/static/js/bundle.js:368223:16)
+    at Table (http://localhost:3000/static/js/bundle.js:368672:61)
+    at div
+    at div
+    at http://localhost:3000/static/js/bundle.js:336592:18
+    at div
+    at div
+    at Spin (http://localhost:3000/static/js/bundle.js:364719:18)
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:528391:8)
+    at ManageSMEs (http://localhost:3000/static/js/bundle.js:68786:83)
+    at div
+    at div
+    at http://localhost:3000/static/js/bundle.js:350546:42
+    at Layout
+    at div
+    at http://localhost:3000/static/js/bundle.js:350546:42
+    at Layout
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:528391:8)
+    at LayoutSetting (http://localhost:3000/static/js/bundle.js:77842:3)
+    at Routes (http://localhost:3000/static/js/bundle.js:518913:5)
+    at SettingPage (http://localhost:3000/static/js/bundle.js:69603:63)
+    at Routes (http://localhost:3000/static/js/bundle.js:518913:5)
+    at div
+    at main
+    at http://localhost:3000/static/js/bundle.js:350526:18
+    at Content
+    at div
+    at http://localhost:3000/static/js/bundle.js:350546:42
+    at Layout
+    at div
+    at http://localhost:3000/static/js/bundle.js:350546:42
+    at Layout
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:528391:8)
+    at LayoutProvider (http://localhost:3000/static/js/bundle.js:2538:3)
+    at Dashboard (http://localhost:3000/static/js/bundle.js:53713:3)
+    at Layout (http://localhost:3000/static/js/bundle.js:54971:63)
+    at http://localhost:3000/static/js/bundle.js:613:3
+    at Routes (http://localhost:3000/static/js/bundle.js:518913:5)
+    at Router (http://localhost:3000/static/js/bundle.js:518853:15)
+    at BrowserRouter (http://localhost:3000/static/js/bundle.js:517785:5)
+    at App (http://localhost:3000/static/js/bundle.js:3376:69)
+    at LocaleProvider (http://localhost:3000/static/js/bundle.js:351823:5)
+    at MotionWrapper (http://localhost:3000/static/js/bundle.js:338797:5)
+    at ProviderChildren (http://localhost:3000/static/js/bundle.js:339393:5)
+    at ConfigProvider (http://localhost:3000/static/js/bundle.js:339666:54)
+    at r (http://localhost:3000/static/js/bundle.js:511780:21)
+    at ApolloProvider (http://localhost:3000/static/js/bundle.js:553267:19)
+    at Provider (http://localhost:3000/static/js/bundle.js:515211:20) @ http://localhost:3000/static/js/bundle.js:522164
+[   12075ms] [ERROR] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `Overlay`.  
+    at http://localhost:3000/static/js/bundle.js:343681:18
+    at Overlay (http://localhost:3000/static/js/bundle.js:358336:5)
+    at NoCompactStyle (http://localhost:3000/static/js/bundle.js:364245:5)
+    at div
+    at div
+    at Popup (http://localhost:3000/static/js/bundle.js:476931:24)
+    at http://localhost:3000/static/js/bundle.js:318560:23
+    at div
+    at DomWrapper (http://localhost:3000/static/js/bundle.js:454118:90)
+    at http://localhost:3000/static/js/bundle.js:453819:32
+    at DomWrapper (http://localhost:3000/static/js/bundle.js:465544:90)
+    at SingleObserver (http://localhost:3000/static/js/bundle.js:465588:24)
+    at ResizeObserver (http://localhost:3000/static/js/bundle.js:465726:24)
+    at http://localhost:3000/static/js/bundle.js:318134:20
+    at http://localhost:3000/static/js/bundle.js:318610:21
+    at http://localhost:3000/static/js/bundle.js:319605:34
+    at Tooltip (http://localhost:3000/static/js/bundle.js:476979:32)
+    at http://localhost:3000/static/js/bundle.js:376058:16
+    at http://localhost:3000/static/js/bundle.js:358349:18
+    at div
+    at http://localhost:3000/static/js/bundle.js:343681:18
+    at td
+    at Cell (http://localhost:3000/static/js/bundle.js:470588:70)
+    at tr
+    at BodyRow (http://localhost:3000/static/js/bundle.js:470170:70)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:317350:7)
+    at tbody
+    at Body (http://localhost:3000/static/js/bundle.js:470455:70)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:317350:7)
+    at table
+    at div
+    at div
+    at div
+    at Provider (http://localhost:3000/static/js/bundle.js:317395:22)
+    at Table (http://localhost:3000/static/js/bundle.js:471642:58)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:317316:63)
+    at div
+    at div
+    at Spin (http://localhost:3000/static/js/bundle.js:364719:18)
+    at div
+    at InternalTable (http://localhost:3000/static/js/bundle.js:368223:16)
+    at Table (http://localhost:3000/static/js/bundle.js:368672:61)
+    at div
+    at div
+    at http://localhost:3000/static/js/bundle.js:336592:18
+    at div
+    at div
+    at Spin (http://localhost:3000/static/js/bundle.js:364719:18)
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:528391:8)
+    at ManageSMEs (http://localhost:3000/static/js/bundle.js:68786:83)
+    at div
+    at div
+    at http://localhost:3000/static/js/bundle.js:350546:42
+    at Layout
+    at div
+    at http://localhost:3000/static/js/bundle.js:350546:42
+    at Layout
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:528391:8)
+    at LayoutSetting (http://localhost:3000/static/js/bundle.js:77842:3)
+    at Routes (http://localhost:3000/static/js/bundle.js:518913:5)
+    at SettingPage (http://localhost:3000/static/js/bundle.js:69603:63)
+    at Routes (http://localhost:3000/static/js/bundle.js:518913:5)
+    at div
+    at main
+    at http://localhost:3000/static/js/bundle.js:350526:18
+    at Content
+    at div
+    at http://localhost:3000/static/js/bundle.js:350546:42
+    at Layout
+    at div
+    at http://localhost:3000/static/js/bundle.js:350546:42
+    at Layout
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:528391:8)
+    at LayoutProvider (http://localhost:3000/static/js/bundle.js:2538:3)
+    at Dashboard (http://localhost:3000/static/js/bundle.js:53713:3)
+    at Layout (http://localhost:3000/static/js/bundle.js:54971:63)
+    at http://localhost:3000/static/js/bundle.js:613:3
+    at Routes (http://localhost:3000/static/js/bundle.js:518913:5)
+    at Router (http://localhost:3000/static/js/bundle.js:518853:15)
+    at BrowserRouter (http://localhost:3000/static/js/bundle.js:517785:5)
+    at App (http://localhost:3000/static/js/bundle.js:3376:69)
+    at LocaleProvider (http://localhost:3000/static/js/bundle.js:351823:5)
+    at MotionWrapper (http://localhost:3000/static/js/bundle.js:338797:5)
+    at ProviderChildren (http://localhost:3000/static/js/bundle.js:339393:5)
+    at ConfigProvider (http://localhost:3000/static/js/bundle.js:339666:54)
+    at r (http://localhost:3000/static/js/bundle.js:511780:21)
+    at ApolloProvider (http://localhost:3000/static/js/bundle.js:553267:19)
+    at Provider (http://localhost:3000/static/js/bundle.js:515211:20) @ http://localhost:3000/static/js/bundle.js:519793

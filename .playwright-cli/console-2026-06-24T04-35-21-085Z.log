@@ -1,0 +1,291 @@
+[     738ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:512110
+[     826ms] [LOG] i18next: languageChanged vi-VN @ http://localhost:3000/static/js/bundle.js:578420
+[     826ms] [LOG] i18next: initialized {debug: true, initImmediate: true, ns: Array(1), defaultNS: Array(1), fallbackLng: Array(1)} @ http://localhost:3000/static/js/bundle.js:578420
+[     828ms] [LOG] THIEN CHECKED @ http://localhost:3000/static/js/bundle.js:145537
+[     868ms] [ERROR] Warning: [antd: Dropdown] `overlay` is deprecated. Please use `menu` instead. @ http://localhost:3000/static/js/bundle.js:484570
+[     875ms] [LOG] {__typename: UserMeOutput, agencyId: 3, avatar_url: https://d3plrvcei1qcpw.cloudfront.net/file/2a7959e9-b172-4ab6-8a40-63be772ef0fa.jpg, business_model: null, email: huy@upbase.vn} @ http://localhost:3000/static/js/bundle.js:54512
+[    2055ms] [ERROR] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `LineChart`.  
+    at div
+    at LineChart (http://localhost:3000/static/js/bundle.js:57601:116)
+    at div
+    at div
+    at http://localhost:3000/static/js/bundle.js:337528:18
+    at ReportOverviewV1 (http://localhost:3000/static/js/bundle.js:56485:3)
+    at div
+    at http://localhost:3000/static/js/bundle.js:344617:18
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:529327:8)
+    at ReportOverview (http://localhost:3000/static/js/bundle.js:57068:83)
+    at ReportProvider (http://localhost:3000/static/js/bundle.js:2689:3)
+    at Routes (http://localhost:3000/static/js/bundle.js:519849:5)
+    at ReportPage
+    at Routes (http://localhost:3000/static/js/bundle.js:519849:5)
+    at div
+    at main
+    at http://localhost:3000/static/js/bundle.js:351462:18
+    at Content
+    at div
+    at http://localhost:3000/static/js/bundle.js:351482:42
+    at Layout
+    at div
+    at http://localhost:3000/static/js/bundle.js:351482:42
+    at Layout
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:529327:8)
+    at LayoutProvider (http://localhost:3000/static/js/bundle.js:2538:3)
+    at Dashboard (http://localhost:3000/static/js/bundle.js:53713:3)
+    at Layout (http://localhost:3000/static/js/bundle.js:54971:63)
+    at http://localhost:3000/static/js/bundle.js:613:3
+    at Routes (http://localhost:3000/static/js/bundle.js:519849:5)
+    at Router (http://localhost:3000/static/js/bundle.js:519789:15)
+    at BrowserRouter (http://localhost:3000/static/js/bundle.js:518721:5)
+    at App (http://localhost:3000/static/js/bundle.js:3376:69)
+    at LocaleProvider (http://localhost:3000/static/js/bundle.js:352759:5)
+    at MotionWrapper (http://localhost:3000/static/js/bundle.js:339733:5)
+    at ProviderChildren (http://localhost:3000/static/js/bundle.js:340329:5)
+    at ConfigProvider (http://localhost:3000/static/js/bundle.js:340602:54)
+    at r (http://localhost:3000/static/js/bundle.js:512716:21)
+    at ApolloProvider (http://localhost:3000/static/js/bundle.js:554203:19)
+    at Provider (http://localhost:3000/static/js/bundle.js:516147:20) @ http://localhost:3000/static/js/bundle.js:520729
+[    2376ms] [ERROR] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `Body`.  
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:318286:7)
+    at Body (http://localhost:3000/static/js/bundle.js:471391:70)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:318286:7)
+    at table
+    at div
+    at div
+    at div
+    at DomWrapper (http://localhost:3000/static/js/bundle.js:466480:90)
+    at SingleObserver (http://localhost:3000/static/js/bundle.js:466524:24)
+    at ResizeObserver (http://localhost:3000/static/js/bundle.js:466662:24)
+    at Provider (http://localhost:3000/static/js/bundle.js:318331:22)
+    at Table (http://localhost:3000/static/js/bundle.js:472578:58)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:318252:63)
+    at div
+    at div
+    at Spin (http://localhost:3000/static/js/bundle.js:365655:18)
+    at div
+    at InternalTable (http://localhost:3000/static/js/bundle.js:369159:16)
+    at Table (http://localhost:3000/static/js/bundle.js:369608:61)
+    at div
+    at div
+    at Spin (http://localhost:3000/static/js/bundle.js:365655:18)
+    at div
+    at http://localhost:3000/static/js/bundle.js:344617:18
+    at ReportTable (http://localhost:3000/static/js/bundle.js:58034:94)
+    at div
+    at div
+    at http://localhost:3000/static/js/bundle.js:337528:18
+    at ReportOverviewV1 (http://localhost:3000/static/js/bundle.js:56485:3)
+    at div
+    at http://localhost:3000/static/js/bundle.js:344617:18
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:529327:8)
+    at ReportOverview (http://localhost:3000/static/js/bundle.js:57068:83)
+    at ReportProvider (http://localhost:3000/static/js/bundle.js:2689:3)
+    at Routes (http://localhost:3000/static/js/bundle.js:519849:5)
+    at ReportPage
+    at Routes (http://localhost:3000/static/js/bundle.js:519849:5)
+    at div
+    at main
+    at http://localhost:3000/static/js/bundle.js:351462:18
+    at Content
+    at div
+    at http://localhost:3000/static/js/bundle.js:351482:42
+    at Layout
+    at div
+    at http://localhost:3000/static/js/bundle.js:351482:42
+    at Layout
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:529327:8)
+    at LayoutProvider (http://localhost:3000/static/js/bundle.js:2538:3)
+    at Dashboard (http://localhost:3000/static/js/bundle.js:53713:3)
+    at Layout (http://localhost:3000/static/js/bundle.js:54971:63)
+    at http://localhost:3000/static/js/bundle.js:613:3
+    at Routes (http://localhost:3000/static/js/bundle.js:519849:5)
+    at Router (http://localhost:3000/static/js/bundle.js:519789:15)
+    at BrowserRouter (http://localhost:3000/static/js/bundle.js:518721:5)
+    at App (http://localhost:3000/static/js/bundle.js:3376:69)
+    at LocaleProvider (http://localhost:3000/static/js/bundle.js:352759:5)
+    at MotionWrapper (http://localhost:3000/static/js/bundle.js:339733:5)
+    at ProviderChildren (http://localhost:3000/static/js/bundle.js:340329:5)
+    at ConfigProvider (http://localhost:3000/static/js/bundle.js:340602:54)
+    at r (http://localhost:3000/static/js/bundle.js:512716:21)
+    at ApolloProvider (http://localhost:3000/static/js/bundle.js:554203:19)
+    at Provider (http://localhost:3000/static/js/bundle.js:516147:20) @ http://localhost:3000/static/js/bundle.js:523100
+[   10746ms] [LOG] Download the Apollo DevTools for a better development experience: %s https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm @ http://localhost:3000/static/js/bundle.js:554116
+[15921016ms] [LOG] {__typename: UserMeOutput, agencyId: 3, avatar_url: https://d3plrvcei1qcpw.cloudfront.net/file/2a7959e9-b172-4ab6-8a40-63be772ef0fa.jpg, business_model: null, email: huy@upbase.vn} @ http://localhost:3000/main.0c6d8a1d3e488a60cd5e.hot-update.js:53
+[20263591ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:531037
+[20265639ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:531037
+[20269654ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:531037
+[20277678ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:531037
+[20293685ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:531037
+[20368593ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:514298
+[20368674ms] [LOG] i18next: languageChanged vi-VN @ http://localhost:3000/static/js/bundle.js:581379
+[20368674ms] [LOG] i18next: initialized {debug: true, initImmediate: true, ns: Array(1), defaultNS: Array(1), fallbackLng: Array(1)} @ http://localhost:3000/static/js/bundle.js:581379
+[20368677ms] [LOG] THIEN CHECKED @ http://localhost:3000/static/js/bundle.js:147703
+[20368710ms] [ERROR] Warning: [antd: Dropdown] `overlay` is deprecated. Please use `menu` instead. @ http://localhost:3000/static/js/bundle.js:486758
+[20368720ms] [LOG] {__typename: UserMeOutput, agencyId: 3, avatar_url: https://d3plrvcei1qcpw.cloudfront.net/file/2a7959e9-b172-4ab6-8a40-63be772ef0fa.jpg, business_model: null, email: huy@upbase.vn} @ http://localhost:3000/static/js/bundle.js:54512
+[20369337ms] [ERROR] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `LineChart`.  
+    at div
+    at LineChart (http://localhost:3000/static/js/bundle.js:57607:116)
+    at div
+    at div
+    at http://localhost:3000/static/js/bundle.js:339716:18
+    at ReportOverviewV1 (http://localhost:3000/static/js/bundle.js:56489:3)
+    at div
+    at http://localhost:3000/static/js/bundle.js:346805:18
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:531515:8)
+    at ReportOverview (http://localhost:3000/static/js/bundle.js:57074:83)
+    at ReportProvider (http://localhost:3000/static/js/bundle.js:2689:3)
+    at Routes (http://localhost:3000/static/js/bundle.js:522037:5)
+    at ReportPage
+    at Routes (http://localhost:3000/static/js/bundle.js:522037:5)
+    at div
+    at main
+    at http://localhost:3000/static/js/bundle.js:353650:18
+    at Content
+    at div
+    at http://localhost:3000/static/js/bundle.js:353670:42
+    at Layout
+    at div
+    at http://localhost:3000/static/js/bundle.js:353670:42
+    at Layout
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:531515:8)
+    at LayoutProvider (http://localhost:3000/static/js/bundle.js:2538:3)
+    at Dashboard (http://localhost:3000/static/js/bundle.js:53713:3)
+    at Layout (http://localhost:3000/static/js/bundle.js:54975:63)
+    at http://localhost:3000/static/js/bundle.js:613:3
+    at Routes (http://localhost:3000/static/js/bundle.js:522037:5)
+    at Router (http://localhost:3000/static/js/bundle.js:521977:15)
+    at BrowserRouter (http://localhost:3000/static/js/bundle.js:520909:5)
+    at App (http://localhost:3000/static/js/bundle.js:3376:69)
+    at LocaleProvider (http://localhost:3000/static/js/bundle.js:354947:5)
+    at MotionWrapper (http://localhost:3000/static/js/bundle.js:341921:5)
+    at ProviderChildren (http://localhost:3000/static/js/bundle.js:342517:5)
+    at ConfigProvider (http://localhost:3000/static/js/bundle.js:342790:54)
+    at r (http://localhost:3000/static/js/bundle.js:514904:21)
+    at ApolloProvider (http://localhost:3000/static/js/bundle.js:557162:19)
+    at Provider (http://localhost:3000/static/js/bundle.js:518335:20) @ http://localhost:3000/static/js/bundle.js:522917
+[20369978ms] [ERROR] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `Body`.  
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:320474:7)
+    at Body (http://localhost:3000/static/js/bundle.js:473579:70)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:320474:7)
+    at table
+    at div
+    at div
+    at div
+    at DomWrapper (http://localhost:3000/static/js/bundle.js:468668:90)
+    at SingleObserver (http://localhost:3000/static/js/bundle.js:468712:24)
+    at ResizeObserver (http://localhost:3000/static/js/bundle.js:468850:24)
+    at Provider (http://localhost:3000/static/js/bundle.js:320519:22)
+    at Table (http://localhost:3000/static/js/bundle.js:474766:58)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:320440:63)
+    at div
+    at div
+    at Spin (http://localhost:3000/static/js/bundle.js:367843:18)
+    at div
+    at InternalTable (http://localhost:3000/static/js/bundle.js:371347:16)
+    at Table (http://localhost:3000/static/js/bundle.js:371796:61)
+    at div
+    at div
+    at Spin (http://localhost:3000/static/js/bundle.js:367843:18)
+    at div
+    at http://localhost:3000/static/js/bundle.js:346805:18
+    at ReportTable (http://localhost:3000/static/js/bundle.js:58040:94)
+    at div
+    at div
+    at http://localhost:3000/static/js/bundle.js:339716:18
+    at ReportOverviewV1 (http://localhost:3000/static/js/bundle.js:56489:3)
+    at div
+    at http://localhost:3000/static/js/bundle.js:346805:18
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:531515:8)
+    at ReportOverview (http://localhost:3000/static/js/bundle.js:57074:83)
+    at ReportProvider (http://localhost:3000/static/js/bundle.js:2689:3)
+    at Routes (http://localhost:3000/static/js/bundle.js:522037:5)
+    at ReportPage
+    at Routes (http://localhost:3000/static/js/bundle.js:522037:5)
+    at div
+    at main
+    at http://localhost:3000/static/js/bundle.js:353650:18
+    at Content
+    at div
+    at http://localhost:3000/static/js/bundle.js:353670:42
+    at Layout
+    at div
+    at http://localhost:3000/static/js/bundle.js:353670:42
+    at Layout
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:531515:8)
+    at LayoutProvider (http://localhost:3000/static/js/bundle.js:2538:3)
+    at Dashboard (http://localhost:3000/static/js/bundle.js:53713:3)
+    at Layout (http://localhost:3000/static/js/bundle.js:54975:63)
+    at http://localhost:3000/static/js/bundle.js:613:3
+    at Routes (http://localhost:3000/static/js/bundle.js:522037:5)
+    at Router (http://localhost:3000/static/js/bundle.js:521977:15)
+    at BrowserRouter (http://localhost:3000/static/js/bundle.js:520909:5)
+    at App (http://localhost:3000/static/js/bundle.js:3376:69)
+    at LocaleProvider (http://localhost:3000/static/js/bundle.js:354947:5)
+    at MotionWrapper (http://localhost:3000/static/js/bundle.js:341921:5)
+    at ProviderChildren (http://localhost:3000/static/js/bundle.js:342517:5)
+    at ConfigProvider (http://localhost:3000/static/js/bundle.js:342790:54)
+    at r (http://localhost:3000/static/js/bundle.js:514904:21)
+    at ApolloProvider (http://localhost:3000/static/js/bundle.js:557162:19)
+    at Provider (http://localhost:3000/static/js/bundle.js:518335:20) @ http://localhost:3000/static/js/bundle.js:525288
+[20378600ms] [LOG] Download the Apollo DevTools for a better development experience: %s https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm @ http://localhost:3000/static/js/bundle.js:557075
+[422594428ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:533225
+[422596479ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:533225
+[422600507ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:533225
+[422608558ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:533225
+[422624650ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:533225
+[422656703ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:533225
+[422720794ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:533225
+[422848838ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:533225
+[423104918ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:533225
+[423617013ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:533225
+[442409532ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:514298
+[442409607ms] [LOG] i18next: languageChanged vi-VN @ http://localhost:3000/static/js/bundle.js:581379
+[442409607ms] [LOG] i18next: initialized {debug: true, initImmediate: true, ns: Array(1), defaultNS: Array(1), fallbackLng: Array(1)} @ http://localhost:3000/static/js/bundle.js:581379
+[442409611ms] [LOG] THIEN CHECKED @ http://localhost:3000/static/js/bundle.js:147703
+[442409712ms] [ERROR] Warning: [antd: Dropdown] `overlay` is deprecated. Please use `menu` instead. @ http://localhost:3000/static/js/bundle.js:486758
+[442409719ms] [LOG] {__typename: UserMeOutput, agencyId: 3, avatar_url: https://d3plrvcei1qcpw.cloudfront.net/file/2a7959e9-b172-4ab6-8a40-63be772ef0fa.jpg, business_model: null, email: huy@upbase.vn} @ http://localhost:3000/static/js/bundle.js:54512
+[442410057ms] [LOG] graphQLErrors, networkError [Object] undefined @ http://localhost:3000/static/js/bundle.js:456
+[442410057ms] [LOG] [GraphQL error]: Message: Authentication hook unauthorized this request {message: Authentication hook unauthorized this request, extensions: Object} @ http://localhost:3000/static/js/bundle.js:459
+[442410060ms] [LOG] graphQLErrors, networkError [Object] undefined @ http://localhost:3000/static/js/bundle.js:456
+[442410060ms] [LOG] [GraphQL error]: Message: Authentication hook unauthorized this request {message: Authentication hook unauthorized this request, extensions: Object} @ http://localhost:3000/static/js/bundle.js:459
+[442410061ms] [LOG] graphQLErrors, networkError [Object] undefined @ http://localhost:3000/static/js/bundle.js:456
+[442410061ms] [LOG] [GraphQL error]: Message: Authentication hook unauthorized this request {message: Authentication hook unauthorized this request, extensions: Object} @ http://localhost:3000/static/js/bundle.js:459
+[442410061ms] [LOG] graphQLErrors, networkError [Object] undefined @ http://localhost:3000/static/js/bundle.js:456
+[442410061ms] [LOG] [GraphQL error]: Message: Authentication hook unauthorized this request {message: Authentication hook unauthorized this request, extensions: Object} @ http://localhost:3000/static/js/bundle.js:459
+[442410065ms] [LOG] graphQLErrors, networkError [Object] undefined @ http://localhost:3000/static/js/bundle.js:456
+[442410066ms] [LOG] [GraphQL error]: Message: Authentication hook unauthorized this request {message: Authentication hook unauthorized this request, extensions: Object} @ http://localhost:3000/static/js/bundle.js:459
+[442410072ms] [LOG] graphQLErrors, networkError [Object] undefined @ http://localhost:3000/static/js/bundle.js:456
+[442410072ms] [LOG] [GraphQL error]: Message: Authentication hook unauthorized this request {message: Authentication hook unauthorized this request, extensions: Object} @ http://localhost:3000/static/js/bundle.js:459
+[442410075ms] [LOG] graphQLErrors, networkError [Object] undefined @ http://localhost:3000/static/js/bundle.js:456
+[442410075ms] [LOG] [GraphQL error]: Message: Authentication hook unauthorized this request {message: Authentication hook unauthorized this request, extensions: Object} @ http://localhost:3000/static/js/bundle.js:459
+[442410082ms] [LOG] graphQLErrors, networkError [Object] undefined @ http://localhost:3000/static/js/bundle.js:456
+[442410082ms] [LOG] [GraphQL error]: Message: Authentication hook unauthorized this request {message: Authentication hook unauthorized this request, extensions: Object} @ http://localhost:3000/static/js/bundle.js:459
+[442411166ms] [LOG] value null @ http://localhost:3000/static/js/bundle.js:509
+[442411217ms] [LOG] value null @ http://localhost:3000/static/js/bundle.js:509
+[442411218ms] [LOG] value null @ http://localhost:3000/static/js/bundle.js:509
+[442411218ms] [LOG] value null @ http://localhost:3000/static/js/bundle.js:509
+[442411219ms] [LOG] value null @ http://localhost:3000/static/js/bundle.js:509
+[442411219ms] [LOG] value null @ http://localhost:3000/static/js/bundle.js:509
+[442411220ms] [LOG] value null @ http://localhost:3000/static/js/bundle.js:509
+[442411223ms] [LOG] value null @ http://localhost:3000/static/js/bundle.js:509
+[442411430ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:514298
+[442411476ms] [LOG] i18next: languageChanged vi-VN @ http://localhost:3000/static/js/bundle.js:581379
+[442411476ms] [LOG] i18next: initialized {debug: true, initImmediate: true, ns: Array(1), defaultNS: Array(1), fallbackLng: Array(1)} @ http://localhost:3000/static/js/bundle.js:581379
+[442411477ms] [LOG] THIEN CHECKED @ http://localhost:3000/static/js/bundle.js:147703
+[442421434ms] [LOG] Download the Apollo DevTools for a better development experience: %s https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm @ http://localhost:3000/static/js/bundle.js:557075

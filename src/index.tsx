@@ -71,6 +71,7 @@ root.render(
         <ConfigProvider
           locale={locale}
           theme={{
+            cssVar: { prefix: 'ant' },
             token: {
               colorPrimary: '#ff5629',
             }

@@ -24,6 +24,7 @@
     "@types/webpack": "^5.28.0",
     "@types/webpack-env": "^1.18.0",
     "antd": "5.16.0",
+    "antd-style": "3",
     "apollo-boost": "0.4.9",
     "apollo-link-error": "1.1.13",
     "apollo-link-ws": "1.0.20",

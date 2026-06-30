@@ -1,0 +1,126 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - img [ref=e8]
+    - generic [ref=e11] [cursor=pointer]:
+      - generic [ref=e12]:
+        - img "avatar" [ref=e14]
+        - superscript [ref=e15]
+      - generic [ref=e16]: huy@upbase.vn
+  - generic [ref=e17]:
+    - complementary [ref=e18]:
+      - generic [ref=e19]:
+        - menu [ref=e20]:
+          - menuitem "line-chart Báo cáo" [ref=e21] [cursor=pointer]:
+            - img "line-chart" [ref=e22]:
+              - img [ref=e23]
+            - generic [ref=e25]: Báo cáo
+          - menuitem "login Kiểm kê" [ref=e26] [cursor=pointer]:
+            - img "login" [ref=e27]:
+              - img [ref=e28]
+            - generic [ref=e30]: Kiểm kê
+          - menuitem "shop Quản lý kho" [ref=e31] [cursor=pointer]:
+            - img "shop" [ref=e32]:
+              - img [ref=e33]
+            - generic [ref=e35]: Quản lý kho
+          - menuitem "login Vận hành nhập" [ref=e36] [cursor=pointer]:
+            - img "login" [ref=e37]:
+              - img [ref=e38]
+            - generic [ref=e40]: Vận hành nhập
+          - menuitem "logout Vận hành xuất" [ref=e41] [cursor=pointer]:
+            - img "logout" [ref=e42]:
+              - img [ref=e43]
+            - generic [ref=e45]: Vận hành xuất
+          - menuitem "setting Quản lý tài khoản" [ref=e46] [cursor=pointer]:
+            - img "setting" [ref=e47]:
+              - img [ref=e48]
+            - generic [ref=e50]: Quản lý tài khoản
+        - generic [ref=e51]:
+          - text: "Phiên bản:"
+          - strong
+        - button "menu-fold" [ref=e52] [cursor=pointer]:
+          - img "menu-fold" [ref=e54]:
+            - img [ref=e55]
+    - main [ref=e57]:
+      - generic [ref=e60]:
+        - generic [ref=e63]:
+          - generic [ref=e64] [cursor=pointer]:
+            - radio "Phiên bản 1" [checked]
+            - generic "Phiên bản 1" [ref=e65]
+          - generic [ref=e66] [cursor=pointer]:
+            - radio "Phiên bản 2"
+            - generic "Phiên bản 2" [ref=e67]
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - generic [ref=e75]: Thời gian
+              - generic [ref=e77]:
+                - textbox "Ngày bắt đầu" [ref=e79]: 26/05/2026 00:00
+                - generic "to" [ref=e81]:
+                  - img "swap-right" [ref=e82]:
+                    - img [ref=e83]
+                - textbox "Ngày kết thúc" [ref=e86]: 24/06/2026 23:59
+                - generic:
+                  - img "calendar":
+                    - img
+                - button "close-circle" [ref=e87] [cursor=pointer]:
+                  - img "close-circle" [ref=e88]:
+                    - img [ref=e89]
+            - generic [ref=e92]:
+              - generic [ref=e94]: UpS
+              - generic [ref=e96] [cursor=pointer]:
+                - generic [ref=e97]:
+                  - combobox [ref=e101]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e103]:
+              - generic [ref=e104]: Nguồn phát sinh
+              - generic [ref=e106] [cursor=pointer]:
+                - generic [ref=e107]:
+                  - combobox [ref=e111]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+          - generic [ref=e112]:
+            - generic [ref=e114]:
+              - generic [ref=e116]: Sàn
+              - generic [ref=e118] [cursor=pointer]:
+                - generic [ref=e119]:
+                  - combobox [ref=e123]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e125]:
+              - generic [ref=e127]: Gian hàng
+              - generic [ref=e129] [cursor=pointer]:
+                - generic [ref=e130]:
+                  - combobox [ref=e134]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e136]:
+              - generic [ref=e138]: Trạng thái hợp đồng
+              - generic [ref=e140] [cursor=pointer]:
+                - generic [ref=e141]:
+                  - combobox [ref=e143]
+                  - generic "Đang hợp tác" [ref=e144]
+                - generic:
+                  - img:
+                    - img
+        - list [ref=e149]:
+          - listitem [ref=e150]
+          - listitem [ref=e151]
+          - listitem [ref=e152]
+          - listitem [ref=e153]
+        - generic [ref=e156]:
+          - strong [ref=e159]: Số liệu chi tiết
+          - generic [ref=e160]:
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic: Chưa có dữ liệu

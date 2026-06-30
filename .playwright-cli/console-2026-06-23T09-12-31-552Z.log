@@ -1,0 +1,5 @@
+[     642ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:511174
+[     734ms] [LOG] i18next: languageChanged vi-VN @ http://localhost:3000/static/js/bundle.js:577484
+[     734ms] [LOG] i18next: initialized {debug: true, initImmediate: true, ns: Array(1), defaultNS: Array(1), fallbackLng: Array(1)} @ http://localhost:3000/static/js/bundle.js:577484
+[     736ms] [LOG] THIEN CHECKED @ http://localhost:3000/static/js/bundle.js:144601
+[   10649ms] [LOG] Download the Apollo DevTools for a better development experience: %s https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm @ http://localhost:3000/static/js/bundle.js:553180

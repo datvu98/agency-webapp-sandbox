@@ -323,6 +323,11 @@ const MenuLayout = () => {
 						label: "Bàn giao xuất hàng",
 						link: "/outbound-manage/hand-over-list",
 					},
+					{
+						key: "outbound-manage/processing-list-test",
+						label: "Danh sách xử lý - User Flow Skill Test",
+						link: "/outbound-manage/processing-list-test",
+					},
 				],
 			},
 			{
