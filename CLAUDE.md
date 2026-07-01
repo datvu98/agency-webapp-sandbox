@@ -1,183 +1,409 @@
-# CLAUDE.md
+# This file configures AI assistants to follow Agency Web App design system standards
 
-## Role
+You are working on a project that uses the Agency Web App design theme built on Ant Design 5 and antd-style.
+Follow these rules STRICTLY when generating or modifying code.
 
-**Agency Web App** — React SPA for the Upbase agency portal. Serves agency operators and fulfillment providers with warehouse management, order fulfillment, settlements, reporting, and customer chat.
+When deviating from any rule here: flag the deviation explicitly, ask whether to update the rule or follow it strictly, and never silently deviate.
 
-| User type | Key flows |
-|-----------|-----------|
-| Agency operator | Chat with customers, fulfillment ops, settlement exports, reports |
-| Fulfillment provider | Warehouse management (inbound/outbound), packing, processing, billing |
+> Design tokens, color palette, typography scale, spacing, and component patterns: **[DESIGN.md](DESIGN.md)**
+
+## Purpose
+
+Design sandbox for the Agency Web App. Engineers validate component patterns, token usage, and layout conventions here before applying them to production. Focus is exclusively on **visual and design system correctness** — components, tokens, spacing, typography, icons.
+
+Existing code in this repository may not follow these rules — it predates this design system. **Do not use existing components as a style reference.** These rules are the reference. If an existing pattern conflicts with a rule here, follow the rule.
+
+## Stack
+
+React 18 · TypeScript · CRA · Ant Design 5 · antd-style · styled-components 5 · @ant-design/icons · @ant-design/plots 2.1
 
 ## Commands
 
 ```bash
-# Development
-yarn start              # CRA dev server (port 3000 by default)
-
-# Build & preview
-yarn build              # Production build → build/
-yarn start:prod         # Build then serve
-
-# Quality
-yarn lint               # ESLint on src/
-yarn lint:fix           # ESLint with auto-fix
-yarn prettify           # Prettier write
-
-# Tests
-yarn test               # Jest (watch mode)
-yarn test:generators    # Plop generator tests
-
-# i18n
-yarn extract-messages   # Scan + update translation keys
-
-# Code generation
-yarn generate           # Plop interactive generator (components, pages, etc.)
+yarn start       # CRA dev server (port 3000)
+yarn build       # production build → build/
+yarn lint        # ESLint on src/
+yarn lint:fix    # ESLint with auto-fix
 ```
 
-## Architecture
+## Project skills
 
-### Stack
+All skills (slash commands) for this project live in `.claude/skills/`. Do not create project-specific skills in `~/.claude/commands/`.
 
-| Layer | Library |
-|-------|---------|
-| UI | React 18, Ant Design 5, styled-components 5 |
-| State | Redux Toolkit + Redux-Saga + redux-injectors (dynamic reducers) |
-| API (queries/mutations) | Apollo Client 3 (`@apollo/client`) |
-| API (REST) | Axios with JWT interceptors |
-| Realtime | Socket.io-client 4 + Apollo WebSocket subscriptions |
-| Routing | react-router-dom v6 |
-| i18n | i18next + react-i18next (Vietnamese locale default) |
-| Auth | JWT stored in `localStorage` (`accessToken`, `refresh_token`) |
+---
 
-### Entry point & routing
+## REQUIRED: Use Ant Design Components Only
 
-`src/index.tsx` bootstraps Redux store, Apollo client, Ant Design config (primary color `#ff5629`, `vi_VN` locale), then mounts `<App />`.
+- ALWAYS use Ant Design components: `Button`, `Select`, `Input`, `Table`, `Tag`, `Segmented`, `Skeleton`, `Tooltip`, `Dropdown`, `Modal`, `Form`, etc.
+- NEVER use raw HTML elements (`<button>`, `<input>`, `<select>`) when an antd equivalent exists
+- NEVER add `style={{}}` or `className` for visual styling directly on antd components — the token cascade handles all visual states automatically
+- NEVER target `.ant-*` class internals in `createStyles`. Fix antd component appearance via `theme.components` inside `src/index.tsx`
 
-`src/app/index.tsx` owns top-level routes:
-- `/login`, `/forgot-password`, `/auth/change-password` — public
-- `/*` — protected via `<AuthenRoute>`, renders `<MainLayout>`
+```tsx
+// ✓ CORRECT
+<Button type="primary">Xác nhận</Button>
+<Input placeholder="Tìm kiếm..." />
+<Select options={options} />
 
-`<MainLayout>` splits routes by `user.category_code`:
-- `fulfillment` users → warehouse-centric routes only
-- default (agency) users → full route set including chat, fulfillment ops, settlements
-
-### Page modules (`src/app/pages/`)
-
-| Module | Path | Description |
-|--------|------|-------------|
-| `LoginPage` | `/login` | JWT login |
-| `ForgotPassword` | `/forgot-password`, `/auth/change-password` | Password reset |
-| `ChatPage` | `/chats` | Customer chat (Socket.io, wrapped in `SocketProvider`) |
-| `Fullfillment` | `/fullfillment-manage/*` | Fulfillment operation & report |
-| `Settlement` | `/settlement-manage/*` | Settlement export (pending / processed) |
-| `WarehouseManagement` | `/warehouse-manage/*`, `/inbound-manage/*`, `/outbound-manage/*` | WMS — locations, stock, packing, processing, bills |
-| `Report` | `/report/*` | Analytics & report overview |
-| `Setting` | `/settings/*` | SME management, sub-users, partners, commissions, contracts |
-| `Campaigns` | `/campaigns/*` | Campaign management |
-
-### State management
-
-- **Global slice** (`src/app/slice/`) — user session, token, `inited` flag
-- **Per-page slices** injected dynamically via `redux-injectors`
-- **Sagas** co-located with their slice
-
-### Apollo / GraphQL
-
-`src/apollo/index.js` — single client with:
-- HTTP link → `REACT_APP_GRAPHQL_ENDPOINT`
-- WebSocket link → `REACT_APP_GRAPHQL_WS_ENDPOINT` (subscriptions via `subscriptions-transport-ws`)
-- Auth link injects `Authorization: Bearer <token>` header
-- Error link handles `Authentication hook unauthorized` → auto-refresh via `agencyRefreshToken` mutation; on failure redirects to `/login`
-
-All GQL documents live in `src/graphql/queries/` and `src/graphql/mutations/`.
-
-### Axios (REST)
-
-`src/setupAxios.ts` — request interceptor attaches Bearer token; response interceptor retries on 401/403 after token refresh, then redirects to `/login`.
-
-### Environment variables
-
-| Variable | Purpose |
-|----------|---------|
-| `REACT_APP_GRAPHQL_ENDPOINT` | GraphQL HTTP endpoint |
-| `REACT_APP_GRAPHQL_WS_ENDPOINT` | GraphQL WebSocket endpoint |
-| `REACT_APP_CHATTING_SOCKET_URL` | Socket.io server URL |
-| `REACT_APP_MODE` | `STAG` / `PROD` |
-
-Local dev: `.env` in repo root already contains defaults pointing to `localhost:3040`.
-
-### Deployment
-
-- `Dockerfile` / `Dockerfile.k8s` — build → nginx serve
-- `nginx/nginx.conf` — SPA routing (`try_files $uri /index.html`)
-- `docker-compose.yaml` — exposes port `3019:80`
-
-## Behavioral Guidelines
-
-### 1. Think Before Coding
-
-**Don't assume. Don't hide confusion. Surface tradeoffs.**
-
-Before implementing:
-- State your assumptions explicitly. If uncertain, ask.
-- If multiple interpretations exist, present them - don't pick silently.
-- If a simpler approach exists, say so. Push back when warranted.
-- If something is unclear, stop. Name what's confusing. Ask.
-
-### 2. Simplicity First
-
-**Minimum code that solves the problem. Nothing speculative.**
-
-- No features beyond what was asked.
-- No abstractions for single-use code.
-- No "flexibility" or "configurability" that wasn't requested.
-- No error handling for impossible scenarios.
-- If you write 200 lines and it could be 50, rewrite it.
-
-Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
-
-### 3. Surgical Changes
-
-**Touch only what you must. Clean up only your own mess.**
-
-When editing existing code:
-- Don't "improve" adjacent code, comments, or formatting.
-- Don't refactor things that aren't broken.
-- Match existing style, even if you'd do it differently.
-- If you notice unrelated dead code, mention it - don't delete it.
-
-When your changes create orphans:
-- Remove imports/variables/functions that YOUR changes made unused.
-- Don't remove pre-existing dead code unless asked.
-
-The test: Every changed line should trace directly to the user's request.
-
-### 4. Goal-Driven Execution
-
-**Define success criteria. Loop until verified.**
-
-Transform tasks into verifiable goals:
-- "Add validation" → "Write tests for invalid inputs, then make them pass"
-- "Fix the bug" → "Write a test that reproduces it, then make it pass"
-- "Refactor X" → "Ensure tests pass before and after"
-
-For multi-step tasks, state a brief plan:
-```
-1. [Step] → verify: [check]
-2. [Step] → verify: [check]
-3. [Step] → verify: [check]
+// ✗ WRONG
+<button onClick={...}>Xác nhận</button>
+<input placeholder="Tìm kiếm..." />
+<Button style={{ background: '#ff5629' }}>Xác nhận</Button>
 ```
 
-Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+---
 
-## Code Standards
+## REQUIRED: Styling — createStyles
 
-- **TypeScript** — `strict: true`; `baseUrl: ./src` (bare imports from `src/` root, e.g. `import foo from 'app/...'`) — no path aliases
-- **Component files**: `PascalCase.tsx`; keep components small; co-locate slice/saga in a `slice/` subfolder next to the page
-- **Loadable pattern**: heavy pages export a `Loadable.ts` using `React.lazy` for code splitting
-- **Contexts**: cross-cutting concerns (socket, report, settlement, fulfillment) use React Context providers in `src/app/contexts/`
-- **Styles**: styled-components for layout; Ant Design for UI primitives; `.styles.ts` files alongside components
-- **i18n**: Vietnamese is the primary language; all user-facing strings go through `i18next` — run `yarn extract-messages` after adding keys
-- **No console.log in production**: `index.tsx` strips `console.log` when `NODE_ENV === 'production'`
-- **Lint on commit**: `lint-staged` runs ESLint fix on `*.ts,tsx,js,jsx` and Prettier on `*.md,json`
+All custom element styling uses `createStyles` from `antd-style`, co-located in a `.styles.ts` file. This gives direct typed access to the full token set — no prop threading, no hardcoded values.
+
+```tsx
+// MyComponent.styles.ts
+import { createStyles } from 'antd-style';
+
+export const useStyles = createStyles(({ token }) => ({
+  card: {
+    background: token.colorBgContainer,
+    border: `1px solid ${token.colorBorderSecondary}`,
+    borderRadius: token.borderRadiusLG,
+    padding: token.paddingLG,
+    '&:hover': { borderColor: token.colorBorder },
+  },
+  title: {
+    color: token.colorText,
+    fontSize: token.fontSize,
+    fontWeight: token.fontWeightStrong,
+  },
+  meta: {
+    color: token.colorTextTertiary,
+    fontSize: token.fontSizeSM,
+  },
+}));
+
+// MyComponent.tsx
+const { styles } = useStyles();
+return (
+  <div className={styles.card}>
+    <span className={styles.title}>Tên đơn hàng</span>
+    <span className={styles.meta}>2 giờ trước</span>
+  </div>
+);
+```
+
+**Decision rule:**
+| Need | What to do |
+|---|---|
+| Custom element needs visual styling | `createStyles` in `[Component].styles.ts` |
+| Antd component visual tweak | `theme.components` in `src/index.tsx` |
+| Layout-only geometry (width, flex, overflow) with no visual style | `style={{}}` one-liner is acceptable |
+
+### ✗ WRONG
+
+```tsx
+// Wrong — inline style even with token values
+const { token } = theme.useToken();
+<div style={{ background: token.colorBgContainer, borderRadius: 8 }}>
+
+// Wrong — hardcoded values in style prop
+<div style={{ background: '#ffffff', borderRadius: 8, padding: 24 }}>
+
+// Wrong — hardcoded values in styled-components
+export const Card = styled.div`
+  background: #ffffff;
+  border: 1px solid #edeef0;
+`;
+
+// Wrong — hover via JS event handlers
+onMouseEnter={() => setHovered(true)}
+style={{ borderColor: hovered ? '#ff5629' : '#edeef0' }}
+```
+
+---
+
+## REQUIRED: Token Setup
+
+`src/index.tsx` is **the only file that may contain hex color values.** Brand tokens are defined once in `ConfigProvider` with `cssVar: { prefix: 'ant' }` enabled — this emits all tokens as `--ant-*` CSS custom properties, which CSS Modules can reference.
+
+```tsx
+// src/index.tsx — THE ONLY FILE with hex values
+<ConfigProvider
+  theme={{
+    cssVar: { prefix: 'ant' },
+    token: {
+      colorPrimary: '#ff5629',
+      // additional brand tokens defined here
+    }
+  }}
+>
+```
+
+When a component needs a token: use `createStyles(({ token }) => ...)` — never call `theme.useToken()` for styling.
+
+```tsx
+// ✓ CORRECT
+export const useStyles = createStyles(({ token }) => ({
+  badge: { color: token.colorSuccess },
+}));
+
+// ✗ WRONG — theme.useToken() for styling
+const { token } = theme.useToken();
+<span style={{ color: token.colorSuccess }}>
+
+// ✗ WRONG — duplicating brand tokens
+const PRIMARY = '#ff5629';
+```
+
+---
+
+## REQUIRED: Token Reference
+
+Common tokens — read `src/index.tsx` for the full defined set. Use these names inside `createStyles`.
+
+| Intent | Token |
+|---|---|
+| Page background | `token.colorBgLayout` |
+| Card / surface | `token.colorBgContainer` |
+| Primary text | `token.colorText` |
+| Secondary text | `token.colorTextSecondary` |
+| Placeholder / hint | `token.colorTextTertiary` |
+| Border (strong) | `token.colorBorder` |
+| Border (subtle) | `token.colorBorderSecondary` |
+| Brand / CTA | `token.colorPrimary` |
+| Base spacing | `token.padding` (16px) |
+| Large spacing | `token.paddingLG` (24px) |
+| Small spacing | `token.paddingSM` (12px) |
+| Base radius | `token.borderRadius` |
+| Large radius | `token.borderRadiusLG` |
+| Normal font weight | CSS default (400) — no token |
+| Strong font weight | `token.fontWeightStrong` (600) |
+| Small font size | `token.fontSizeSM` |
+
+In CSS Modules, reference the same values via CSS variables: `var(--ant-color-bg-container)`, `var(--ant-border-radius-lg)`, etc.
+
+---
+
+## REQUIRED: Icons
+
+- ALWAYS use `@ant-design/icons`
+- Sizes: **14px** in forms/inputs, **16px** in toolbars/actions
+- Color: set via `createStyles` using `token.colorTextTertiary` — never hardcode icon colors
+
+```tsx
+// ✓ CORRECT
+import { SearchOutlined } from '@ant-design/icons';
+export const useStyles = createStyles(({ token }) => ({
+  icon: { fontSize: 16, color: token.colorTextTertiary },
+}));
+const { styles } = useStyles();
+<SearchOutlined className={styles.icon} />
+
+// ✗ WRONG — hardcoded color
+<SearchOutlined style={{ color: '#8c8c8c' }} />
+```
+
+---
+
+## REQUIRED: Component Patterns
+
+### Section card
+
+```tsx
+// SectionCard.styles.ts
+export const useStyles = createStyles(({ token }) => ({
+  card: {
+    background: token.colorBgContainer,
+    border: `1px solid ${token.colorBorderSecondary}`,
+    borderRadius: token.borderRadiusLG,
+    boxShadow: token.boxShadowTertiary,
+    padding: token.paddingLG,
+    marginBottom: token.margin,
+  },
+}));
+```
+
+### Button hierarchy — ALWAYS one primary per view
+
+```tsx
+// ✓ CORRECT — text → default → primary
+<Button type="text">Huỷ</Button>
+<Button type="default">Lưu nháp</Button>
+<Button type="primary">Xác nhận</Button>
+
+// ✗ WRONG — two primary in same action group
+<Button type="primary">Lưu nháp</Button>
+<Button type="primary">Xác nhận</Button>
+```
+
+### Status badges — antd Tag with semantic color prop
+
+```tsx
+// ✓ CORRECT
+<Tag color="success">Hoàn thành</Tag>
+<Tag color="warning">Chờ xử lý</Tag>
+<Tag color="error">Đã huỷ</Tag>
+<Tag color="processing">Đang giao</Tag>
+<Tag color="default">Nháp</Tag>
+
+// ✗ WRONG
+<span style={{ backgroundColor: '#d9f7be', padding: '2px 8px' }}>Hoàn thành</span>
+```
+
+### Small option toggles — Segmented, not ad-hoc buttons
+
+```tsx
+<Segmented
+  value={tab}
+  onChange={setTab}
+  options={[{ label: 'Nội bộ', value: 'internal' }, { label: 'Khách hàng', value: 'customer' }]}
+/>
+```
+
+### Page layout
+
+- Background: `token.colorBgLayout`, max-width **1440px**, centered
+- Two-column layout: main `flex: 1` + sidebar `flex: 0 0 280px`, gap `token.paddingLG`
+- Sticky action bar: surface bg · `border-top: 1px solid ${token.colorBorderSecondary}` · padding `12px 24px`
+
+---
+
+## REQUIRED: Antd Component Internal Overrides
+
+When a component needs to override antd Table rows, inputs, or other internal states, use the approved patterns below — never target `.ant-*` classes in `createStyles`.
+
+### Row background colors → `onRow` callback
+
+```tsx
+const { token } = theme.useToken();  // onRow is data-driven, not styling — useToken is ok here
+
+<Table
+  onRow={(record) => ({
+    style: {
+      background: record.isParent
+        ? token.colorFillQuaternary
+        : token.colorBgContainer,
+    },
+  })}
+/>
+```
+
+### Semantic row states → `rowClassName` + own-class in createStyles
+
+```tsx
+// Table usage
+<Table rowClassName={(record) => record.isParent ? 'row-parent' : ''} />
+
+// TableWrapper.styles.ts — targeting OUR class, not .ant-*
+export const useStyles = createStyles(({ token }) => ({
+  table: {
+    '.row-parent > td': {
+      background: `${token.colorFillQuaternary} !important`,
+    },
+  },
+}));
+
+const { styles } = useStyles();
+<div className={styles.table}><Table ... /></div>
+```
+
+### Structural display overrides → CSS Module with `:global`
+
+For `display: none`, `padding: 0`, `nth-child` — things callbacks cannot express:
+
+```css
+/* CampaignTable.module.css */
+.wrap :global(.ant-table-row-expand-icon-cell) {
+  display: none !important;
+  width: 0 !important;
+}
+.row:nth-child(even) { background: var(--ant-color-fill-quaternary); }
+```
+
+---
+
+## REQUIRED: Pattern Consistency Protocol
+
+When implementing ANY UI pattern — tables, filters, badges, forms, toolbars, modals:
+
+1. **Search for existing `createStyles` implementations first** — grep for the same pattern in other modules
+2. **Follow the established pattern exactly** — same token references, same `createStyles` structure
+3. **Never improvise a new pattern** when an existing one covers the use case
+4. **Legacy code is not a reference** — if the existing file uses `styled-components`, inline `style={{}}`, or `className` on antd components, it predates this design system. Discard it as a reference entirely and build from these rules only.
+
+## REQUIRED: New Component Pre-flight Checklist
+
+Before writing any new component file, verify every point:
+
+- [ ] All visual properties (color, border, radius, shadow, spacing, typography) go through `createStyles` with token values
+- [ ] No `className` or `style={{}}` for visual styling on antd components
+- [ ] No hardcoded px numbers or hex values — token values only
+- [ ] Layout-only geometry (width, flex, overflow) may use `style={{}}` one-liners — nothing else
+- [ ] Sidebar width is exactly 280px per DESIGN.md two-column spec
+- [ ] Empty states use `<Empty>` — no component renders blank when data is missing
+- [ ] Reference is CLAUDE.md and DESIGN.md — not the file being replaced or extended
+
+---
+
+## FORBIDDEN — Never Do These
+
+```tsx
+// ✗ Hardcoded hex or px values outside src/index.tsx
+style={{ color: '#ff5629' }}
+const PRIMARY = '#ff5629';
+background: '#ffffff'; // inside createStyles
+
+// ✗ theme.useToken() for styling
+const { token } = theme.useToken();
+<div style={{ color: token.colorText }}>
+
+// ✗ Inline style={{}} for visual properties (colors, borders, radius, shadows)
+<div style={{ background: token.colorBgContainer, borderRadius: 8 }}>
+
+// ✗ Visual style or className on antd components
+<Button style={{ backgroundColor: '#ff5629', height: 40 }}>
+<Input className="my-custom-input" />
+
+// ✗ Hover / active state via JS event handlers
+onMouseEnter={() => setHovered(true)}
+style={{ borderColor: hovered ? '#ff5629' : '#edeef0' }}
+
+// ✗ Targeting .ant-* internals in createStyles
+export const useStyles = createStyles(() => ({
+  wrap: { '.ant-btn': { background: 'red' } },
+}));
+
+// ✗ Multiple primary buttons in same action group
+<Button type="primary">Lưu</Button>
+<Button type="primary">Gửi</Button>
+```
+
+---
+
+## Logic Boundary — Don't Touch
+
+This sandbox validates design and component patterns only. The following are out of scope:
+
+**Never modify:** routing, Redux slices/sagas, Apollo queries/mutations, Axios setup, Socket.io, auth logic, i18n keys, GraphQL documents.
+
+If a design task appears to require changing any of these, stop and ask — the task is likely scoped incorrectly.
+
+---
+
+## Folder Structure
+
+```
+src/
+├── app/pages/        ← feature pages
+│   └── [Module]/
+│       ├── components/   ← feature components + .styles.ts
+│       └── slice/        ← Redux logic (don't generate here)
+├── app/contexts/     ← cross-cutting React contexts (don't generate here)
+├── components/       ← shared UI components + .styles.ts
+└── index.tsx         ← ConfigProvider with brand tokens (only hex values live here)
+```
+
+| What | Where |
+|---|---|
+| Feature component | `src/app/pages/[Module]/components/[Component].tsx` |
+| Co-located styles | `src/app/pages/[Module]/components/[Component].styles.ts` |
+| Shared component | `src/components/[Component].tsx` |
+| Shared styles | `src/components/[Component].styles.ts` |

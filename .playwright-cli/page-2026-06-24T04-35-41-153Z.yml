@@ -1,0 +1,429 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - img [ref=e8]
+    - generic [ref=e11] [cursor=pointer]:
+      - generic [ref=e12]:
+        - img "avatar" [ref=e14]
+        - superscript [ref=e15]
+      - generic [ref=e16]: huy@upbase.vn
+  - main [ref=e18]:
+    - generic [ref=e21]:
+      - generic [ref=e24]:
+        - generic [ref=e25] [cursor=pointer]:
+          - radio "Phiên bản 1"
+          - generic "Phiên bản 1" [ref=e26]
+        - generic [ref=e27] [cursor=pointer]:
+          - radio "Phiên bản 2"
+          - generic "Phiên bản 2" [ref=e28]
+        - generic [ref=e29] [cursor=pointer]:
+          - radio "Phiên bản 3" [checked] [active]
+          - generic "Phiên bản 3" [ref=e30]
+      - generic [ref=e432]:
+        - generic [ref=e435]:
+          - generic [ref=e437]:
+            - generic [ref=e438]: Thời gian
+            - generic [ref=e441]:
+              - textbox "Ngày bắt đầu" [ref=e443]: 26/05/2026 00:00
+              - generic "to" [ref=e445]:
+                - img "swap-right" [ref=e446]:
+                  - img [ref=e447]
+              - textbox "Ngày kết thúc" [ref=e450]: 24/06/2026 23:59
+              - generic:
+                - img "calendar":
+                  - img
+              - button "close-circle" [ref=e451] [cursor=pointer]:
+                - img "close-circle" [ref=e452]:
+                  - img [ref=e453]
+          - generic [ref=e456]:
+            - generic [ref=e457]: UpS
+            - generic [ref=e460] [cursor=pointer]:
+              - generic [ref=e461]:
+                - combobox [ref=e465]
+                - generic: Tất cả
+              - generic:
+                - img:
+                  - img
+          - generic [ref=e467]:
+            - generic [ref=e468]: Nguồn phát sinh
+            - generic [ref=e471] [cursor=pointer]:
+              - generic [ref=e472]:
+                - combobox [ref=e476]
+                - generic: Tất cả
+              - generic:
+                - img:
+                  - img
+          - generic [ref=e478]:
+            - generic [ref=e479]: Sàn
+            - generic [ref=e482] [cursor=pointer]:
+              - generic [ref=e483]:
+                - combobox [ref=e487]
+                - generic: Tất cả
+              - generic:
+                - img:
+                  - img
+          - generic [ref=e489]:
+            - generic [ref=e490]: Gian hàng
+            - generic [ref=e493] [cursor=pointer]:
+              - generic [ref=e494]:
+                - combobox [ref=e498]
+                - generic: Tất cả
+              - generic:
+                - img:
+                  - img
+          - generic [ref=e500]:
+            - generic [ref=e501]: Trạng thái hợp đồng
+            - generic [ref=e504] [cursor=pointer]:
+              - generic [ref=e505]:
+                - combobox [ref=e507]
+                - generic "Đang hợp tác" [ref=e508]
+              - generic:
+                - img:
+                  - img
+        - generic [ref=e510]:
+          - strong [ref=e512]: Biểu đồ xu hướng
+          - generic [ref=e516]:
+            - generic [ref=e520] [cursor=pointer]:
+              - generic [ref=e521]:
+                - generic [ref=e522]: GMV sàn
+                - img "info-circle" [ref=e524]:
+                  - img [ref=e525]
+              - paragraph [ref=e528]: 30,260,000
+              - generic [ref=e529]:
+                - generic [ref=e530]: So với kì trước
+                - generic [ref=e531]:
+                  - img "caret-down" [ref=e532]:
+                    - img [ref=e533]
+                  - text: 54.09%
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: GMV nhà bán
+                      - generic:
+                        - img:
+                          - img
+                    - paragraph: 30,260,000
+                    - generic:
+                      - generic: So với kì trước
+                      - generic:
+                        - img:
+                          - img
+                        - text: 53.94%
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: NMV (Doanh số hiệu quả)
+                      - generic:
+                        - img:
+                          - img
+                    - paragraph: 30,260,000
+                    - generic:
+                      - generic: So với kì trước
+                      - generic:
+                        - img:
+                          - img
+                        - text: 98.56%
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: Đơn hàng
+                      - generic:
+                        - img:
+                          - img
+                    - paragraph: "22"
+                    - generic:
+                      - generic: So với kì trước
+                      - generic:
+                        - img:
+                          - img
+                        - text: 37.50%
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: Đơn hàng hiệu quả
+                      - generic:
+                        - img:
+                          - img
+                    - paragraph: "22"
+                    - generic:
+                      - generic: So với kì trước
+                      - generic:
+                        - img:
+                          - img
+                        - text: 120.00%
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: AOV
+                      - generic:
+                        - img:
+                          - img
+                    - paragraph: 1,375,454.55
+                    - generic:
+                      - generic: So với kì trước
+                      - generic:
+                        - img:
+                          - img
+                        - text: 66.50%
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: Số đơn hủy
+                      - generic:
+                        - img:
+                          - img
+                    - paragraph: "0"
+                    - generic:
+                      - generic: So với kì trước
+                      - generic: "--"
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: Doanh số hủy nhà bán
+                      - generic:
+                        - img:
+                          - img
+                    - paragraph: "0"
+                    - generic:
+                      - generic: So với kì trước
+                      - generic:
+                        - img:
+                          - img
+                        - text: 100.00%
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: Số đơn hoàn
+                      - generic:
+                        - img:
+                          - img
+                    - paragraph: "0"
+                    - generic:
+                      - generic: So với kì trước
+                      - generic: "--"
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: Doanh số hoàn nhà bán
+                      - generic:
+                        - img:
+                          - img
+                    - paragraph: "0"
+                    - generic:
+                      - generic: So với kì trước
+                      - generic: "--"
+          - button "right" [ref=e535] [cursor=pointer]:
+            - img "right" [ref=e536]:
+              - img [ref=e537]
+        - generic [ref=e541]:
+          - generic [ref=e542]: Báo cáo chi tiết
+          - generic [ref=e544]:
+            - strong [ref=e547]: Số liệu chi tiết
+            - generic [ref=e554]:
+              - table [ref=e556]:
+                - rowgroup [ref=e570]:
+                  - row "Thông tin gian hàng UpS GMV sàn GMV nhà bán NMV (Doanh số hiệu quả) Đơn hàng Đơn hàng hiệu quả AOV Số đơn hủy Doanh số hủy nhà bán Số đơn hoàn Doanh số hoàn nhà bán" [ref=e571]:
+                    - columnheader "Thông tin gian hàng" [ref=e572]
+                    - columnheader "UpS" [ref=e573] [cursor=pointer]:
+                      - generic [ref=e574]:
+                        - generic [ref=e575]: UpS
+                        - generic [ref=e577]:
+                          - img [ref=e578]:
+                            - img [ref=e579]
+                          - img [ref=e581]:
+                            - img [ref=e582]
+                    - columnheader "GMV sàn" [ref=e584] [cursor=pointer]:
+                      - generic [ref=e585]:
+                        - generic [ref=e586]: GMV sàn
+                        - generic [ref=e588]:
+                          - img [ref=e589]:
+                            - img [ref=e590]
+                          - img [ref=e592]:
+                            - img [ref=e593]
+                    - columnheader "GMV nhà bán" [ref=e595] [cursor=pointer]:
+                      - generic [ref=e596]:
+                        - generic [ref=e597]: GMV nhà bán
+                        - generic [ref=e599]:
+                          - img [ref=e600]:
+                            - img [ref=e601]
+                          - img [ref=e603]:
+                            - img [ref=e604]
+                    - columnheader "NMV (Doanh số hiệu quả)" [ref=e606] [cursor=pointer]:
+                      - generic [ref=e607]:
+                        - generic [ref=e608]: NMV (Doanh số hiệu quả)
+                        - generic [ref=e610]:
+                          - img [ref=e611]:
+                            - img [ref=e612]
+                          - img [ref=e614]:
+                            - img [ref=e615]
+                    - columnheader "Đơn hàng" [ref=e617] [cursor=pointer]:
+                      - generic [ref=e618]:
+                        - generic [ref=e619]: Đơn hàng
+                        - generic [ref=e621]:
+                          - img [ref=e622]:
+                            - img [ref=e623]
+                          - img [ref=e625]:
+                            - img [ref=e626]
+                    - columnheader "Đơn hàng hiệu quả" [ref=e628] [cursor=pointer]:
+                      - generic [ref=e629]:
+                        - generic [ref=e630]: Đơn hàng hiệu quả
+                        - generic [ref=e632]:
+                          - img [ref=e633]:
+                            - img [ref=e634]
+                          - img [ref=e636]:
+                            - img [ref=e637]
+                    - columnheader "AOV" [ref=e639] [cursor=pointer]:
+                      - generic [ref=e640]:
+                        - generic [ref=e641]: AOV
+                        - generic [ref=e643]:
+                          - img [ref=e644]:
+                            - img [ref=e645]
+                          - img [ref=e647]:
+                            - img [ref=e648]
+                    - columnheader "Số đơn hủy" [ref=e650] [cursor=pointer]:
+                      - generic [ref=e651]:
+                        - generic [ref=e652]: Số đơn hủy
+                        - generic [ref=e654]:
+                          - img [ref=e655]:
+                            - img [ref=e656]
+                          - img [ref=e658]:
+                            - img [ref=e659]
+                    - columnheader "Doanh số hủy nhà bán" [ref=e661] [cursor=pointer]:
+                      - generic [ref=e662]:
+                        - generic [ref=e663]: Doanh số hủy nhà bán
+                        - generic [ref=e665]:
+                          - img [ref=e666]:
+                            - img [ref=e667]
+                          - img [ref=e669]:
+                            - img [ref=e670]
+                    - columnheader "Số đơn hoàn" [ref=e672] [cursor=pointer]:
+                      - generic [ref=e673]:
+                        - generic [ref=e674]: Số đơn hoàn
+                        - generic [ref=e676]:
+                          - img [ref=e677]:
+                            - img [ref=e678]
+                          - img [ref=e680]:
+                            - img [ref=e681]
+                    - columnheader "Doanh số hoàn nhà bán" [ref=e683] [cursor=pointer]:
+                      - generic [ref=e684]:
+                        - generic [ref=e685]: Doanh số hoàn nhà bán
+                        - generic [ref=e687]:
+                          - img [ref=e688]:
+                            - img [ref=e689]
+                          - img [ref=e691]:
+                            - img [ref=e692]
+              - table [ref=e695]:
+                - rowgroup [ref=e709]:
+                  - row "Test Haravan Ekseption 26.80M(0.00%) 26.80M(0.00%) 26.80M(0.00%) 1.00(0.00%) 1.00(0.00%) 26.80M(0.00%) 0.00(0.00%) 0.00(0.00%) 0.00(0.00%) 0.00(0.00%)" [ref=e710]:
+                    - cell "Test Haravan" [ref=e711]:
+                      - generic [ref=e712]:
+                        - img [ref=e713]
+                        - generic [ref=e714]: Test Haravan
+                    - cell "Ekseption" [ref=e715]:
+                      - generic [ref=e716]: Ekseption
+                    - cell "26.80M(0.00%)" [ref=e717]:
+                      - generic [ref=e718]: 26.80M(0.00%)
+                    - cell "26.80M(0.00%)" [ref=e719]:
+                      - generic [ref=e720]: 26.80M(0.00%)
+                    - cell "26.80M(0.00%)" [ref=e721]:
+                      - generic [ref=e722]: 26.80M(0.00%)
+                    - cell "1.00(0.00%)" [ref=e723]:
+                      - generic [ref=e724]: 1.00(0.00%)
+                    - cell "1.00(0.00%)" [ref=e725]:
+                      - generic [ref=e726]: 1.00(0.00%)
+                    - cell "26.80M(0.00%)" [ref=e727]:
+                      - generic [ref=e728]: 26.80M(0.00%)
+                    - cell "0.00(0.00%)" [ref=e729]:
+                      - generic [ref=e730]: 0.00(0.00%)
+                    - cell "0.00(0.00%)" [ref=e731]:
+                      - generic [ref=e732]: 0.00(0.00%)
+                    - cell "0.00(0.00%)" [ref=e733]:
+                      - generic [ref=e734]: 0.00(0.00%)
+                    - cell "0.00(0.00%)" [ref=e735]:
+                      - generic [ref=e736]: 0.00(0.00%)
+                  - row "GH A Thắng Vũ 3.44M(0.00%) 3.44M(0.00%) 3.44M(0.00%) 20.00(0.00%) 20.00(0.00%) 172.00K(0.00%) 0.00(0.00%) 0.00(0.00%) 0.00(0.00%) 0.00(0.00%)" [ref=e737]:
+                    - cell "GH A" [ref=e738]:
+                      - generic [ref=e739]:
+                        - img [ref=e740]
+                        - generic [ref=e741]: GH A
+                    - cell "Thắng Vũ" [ref=e742]:
+                      - generic [ref=e743]: Thắng Vũ
+                    - cell "3.44M(0.00%)" [ref=e744]:
+                      - generic [ref=e745]: 3.44M(0.00%)
+                    - cell "3.44M(0.00%)" [ref=e746]:
+                      - generic [ref=e747]: 3.44M(0.00%)
+                    - cell "3.44M(0.00%)" [ref=e748]:
+                      - generic [ref=e749]: 3.44M(0.00%)
+                    - cell "20.00(0.00%)" [ref=e750]:
+                      - generic [ref=e751]: 20.00(0.00%)
+                    - cell "20.00(0.00%)" [ref=e752]:
+                      - generic [ref=e753]: 20.00(0.00%)
+                    - cell "172.00K(0.00%)" [ref=e754]:
+                      - generic [ref=e755]: 172.00K(0.00%)
+                    - cell "0.00(0.00%)" [ref=e756]:
+                      - generic [ref=e757]: 0.00(0.00%)
+                    - cell "0.00(0.00%)" [ref=e758]:
+                      - generic [ref=e759]: 0.00(0.00%)
+                    - cell "0.00(0.00%)" [ref=e760]:
+                      - generic [ref=e761]: 0.00(0.00%)
+                    - cell "0.00(0.00%)" [ref=e762]:
+                      - generic [ref=e763]: 0.00(0.00%)
+                  - row "Test tính năng Thắng Vũ 20.00K(0.00%) 20.00K(0.00%) 20.00K(0.00%) 1.00(0.00%) 1.00(0.00%) 20.00K(0.00%) 0.00(0.00%) 0.00(0.00%) 0.00(0.00%) 0.00(0.00%)" [ref=e764]:
+                    - cell "Test tính năng" [ref=e765]:
+                      - generic [ref=e766]:
+                        - img [ref=e767]
+                        - generic [ref=e768]: Test tính năng
+                    - cell "Thắng Vũ" [ref=e769]:
+                      - generic [ref=e770]: Thắng Vũ
+                    - cell "20.00K(0.00%)" [ref=e771]:
+                      - generic [ref=e772]: 20.00K(0.00%)
+                    - cell "20.00K(0.00%)" [ref=e773]:
+                      - generic [ref=e774]: 20.00K(0.00%)
+                    - cell "20.00K(0.00%)" [ref=e775]:
+                      - generic [ref=e776]: 20.00K(0.00%)
+                    - cell "1.00(0.00%)" [ref=e777]:
+                      - generic [ref=e778]: 1.00(0.00%)
+                    - cell "1.00(0.00%)" [ref=e779]:
+                      - generic [ref=e780]: 1.00(0.00%)
+                    - cell "20.00K(0.00%)" [ref=e781]:
+                      - generic [ref=e782]: 20.00K(0.00%)
+                    - cell "0.00(0.00%)" [ref=e783]:
+                      - generic [ref=e784]: 0.00(0.00%)
+                    - cell "0.00(0.00%)" [ref=e785]:
+                      - generic [ref=e786]: 0.00(0.00%)
+                    - cell "0.00(0.00%)" [ref=e787]:
+                      - generic [ref=e788]: 0.00(0.00%)
+                    - cell "0.00(0.00%)" [ref=e789]:
+                      - generic [ref=e790]: 0.00(0.00%)
+              - table [ref=e792]:
+                - rowgroup [ref=e806]:
+                  - row "Tổng (4 gian hàng) 3 UpS 30.26M 30.26M 30.26M 22.00 22.00 1.38M 0.00 0.00 0.00 0.00" [ref=e807]:
+                    - cell "Tổng (4 gian hàng)" [ref=e808]
+                    - cell "3 UpS" [ref=e809]
+                    - cell "30.26M" [ref=e810]
+                    - cell "30.26M" [ref=e811]
+                    - cell "30.26M" [ref=e812]
+                    - cell "22.00" [ref=e813]
+                    - cell "22.00" [ref=e814]
+                    - cell "1.38M" [ref=e815]
+                    - cell "0.00" [ref=e816]
+                    - cell "0.00" [ref=e817]
+                    - cell "0.00" [ref=e818]
+                    - cell "0.00" [ref=e819]

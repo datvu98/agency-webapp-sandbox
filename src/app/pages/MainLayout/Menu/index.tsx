@@ -226,6 +226,11 @@ const MenuLayout = () => {
 						label: "Báo cáo hạn SLA",
 						link: "/report/fullfillment-report",
 					},
+					{
+						key: "report/conversion-bills",
+						label: "Báo cáo chuyển đổi",
+						link: "/report/conversion-bills",
+					},
 				],
 			},
 			{
@@ -322,6 +327,11 @@ const MenuLayout = () => {
 						key: "outbound-manage/hand-over-list",
 						label: "Bàn giao xuất hàng",
 						link: "/outbound-manage/hand-over-list",
+					},
+					{
+						key: "outbound-manage/processing-list-test",
+						label: "Danh sách xử lý - User Flow Skill Test",
+						link: "/outbound-manage/processing-list-test",
 					},
 				],
 			},

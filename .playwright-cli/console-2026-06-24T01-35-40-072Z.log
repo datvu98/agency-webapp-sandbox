@@ -1,0 +1,119 @@
+[     578ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:511065
+[     650ms] [LOG] i18next: languageChanged vi-VN @ http://localhost:3000/static/js/bundle.js:577375
+[     650ms] [LOG] i18next: initialized {debug: true, initImmediate: true, ns: Array(1), defaultNS: Array(1), fallbackLng: Array(1)} @ http://localhost:3000/static/js/bundle.js:577375
+[     651ms] [LOG] THIEN CHECKED @ http://localhost:3000/static/js/bundle.js:144492
+[     744ms] [ERROR] Warning: [antd: Dropdown] `overlay` is deprecated. Please use `menu` instead. @ http://localhost:3000/static/js/bundle.js:483525
+[     749ms] [LOG] {__typename: UserMeOutput, agencyId: 3, avatar_url: https://d3plrvcei1qcpw.cloudfront.net/file/2a7959e9-b172-4ab6-8a40-63be772ef0fa.jpg, business_model: null, email: huy@upbase.vn} @ http://localhost:3000/static/js/bundle.js:54512
+[    2737ms] [ERROR] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `LineChart`.  
+    at div
+    at LineChart (http://localhost:3000/static/js/bundle.js:56754:116)
+    at div
+    at div
+    at ReportOverviewV2 (http://localhost:3000/static/js/bundle.js:56043:3)
+    at div
+    at http://localhost:3000/static/js/bundle.js:343572:18
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:528282:8)
+    at ReportOverview (http://localhost:3000/static/js/bundle.js:56230:83)
+    at ReportProvider (http://localhost:3000/static/js/bundle.js:2689:3)
+    at Routes (http://localhost:3000/static/js/bundle.js:518804:5)
+    at ReportPage
+    at Routes (http://localhost:3000/static/js/bundle.js:518804:5)
+    at div
+    at main
+    at http://localhost:3000/static/js/bundle.js:350417:18
+    at Content
+    at div
+    at http://localhost:3000/static/js/bundle.js:350437:42
+    at Layout
+    at div
+    at http://localhost:3000/static/js/bundle.js:350437:42
+    at Layout
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:528282:8)
+    at LayoutProvider (http://localhost:3000/static/js/bundle.js:2538:3)
+    at Dashboard (http://localhost:3000/static/js/bundle.js:53713:3)
+    at Layout (http://localhost:3000/static/js/bundle.js:54971:63)
+    at http://localhost:3000/static/js/bundle.js:613:3
+    at Routes (http://localhost:3000/static/js/bundle.js:518804:5)
+    at Router (http://localhost:3000/static/js/bundle.js:518744:15)
+    at BrowserRouter (http://localhost:3000/static/js/bundle.js:517676:5)
+    at App (http://localhost:3000/static/js/bundle.js:3376:69)
+    at LocaleProvider (http://localhost:3000/static/js/bundle.js:351714:5)
+    at MotionWrapper (http://localhost:3000/static/js/bundle.js:338688:5)
+    at ProviderChildren (http://localhost:3000/static/js/bundle.js:339284:5)
+    at ConfigProvider (http://localhost:3000/static/js/bundle.js:339557:54)
+    at r (http://localhost:3000/static/js/bundle.js:511671:21)
+    at ApolloProvider (http://localhost:3000/static/js/bundle.js:553158:19)
+    at Provider (http://localhost:3000/static/js/bundle.js:515102:20) @ http://localhost:3000/static/js/bundle.js:519684
+[    3044ms] [ERROR] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `Body`.  
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:317241:7)
+    at Body (http://localhost:3000/static/js/bundle.js:470346:70)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:317241:7)
+    at table
+    at div
+    at div
+    at div
+    at DomWrapper (http://localhost:3000/static/js/bundle.js:465435:90)
+    at SingleObserver (http://localhost:3000/static/js/bundle.js:465479:24)
+    at ResizeObserver (http://localhost:3000/static/js/bundle.js:465617:24)
+    at Provider (http://localhost:3000/static/js/bundle.js:317286:22)
+    at Table (http://localhost:3000/static/js/bundle.js:471533:58)
+    at ImmutableComponent (http://localhost:3000/static/js/bundle.js:317207:63)
+    at div
+    at div
+    at Spin (http://localhost:3000/static/js/bundle.js:364610:18)
+    at div
+    at InternalTable (http://localhost:3000/static/js/bundle.js:368114:16)
+    at Table (http://localhost:3000/static/js/bundle.js:368563:61)
+    at div
+    at div
+    at Spin (http://localhost:3000/static/js/bundle.js:364610:18)
+    at div
+    at http://localhost:3000/static/js/bundle.js:343572:18
+    at ReportTable (http://localhost:3000/static/js/bundle.js:57187:94)
+    at div
+    at div
+    at div
+    at ReportOverviewV2 (http://localhost:3000/static/js/bundle.js:56043:3)
+    at div
+    at http://localhost:3000/static/js/bundle.js:343572:18
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:528282:8)
+    at ReportOverview (http://localhost:3000/static/js/bundle.js:56230:83)
+    at ReportProvider (http://localhost:3000/static/js/bundle.js:2689:3)
+    at Routes (http://localhost:3000/static/js/bundle.js:518804:5)
+    at ReportPage
+    at Routes (http://localhost:3000/static/js/bundle.js:518804:5)
+    at div
+    at main
+    at http://localhost:3000/static/js/bundle.js:350417:18
+    at Content
+    at div
+    at http://localhost:3000/static/js/bundle.js:350437:42
+    at Layout
+    at div
+    at http://localhost:3000/static/js/bundle.js:350437:42
+    at Layout
+    at div
+    at O (http://localhost:3000/static/js/bundle.js:528282:8)
+    at LayoutProvider (http://localhost:3000/static/js/bundle.js:2538:3)
+    at Dashboard (http://localhost:3000/static/js/bundle.js:53713:3)
+    at Layout (http://localhost:3000/static/js/bundle.js:54971:63)
+    at http://localhost:3000/static/js/bundle.js:613:3
+    at Routes (http://localhost:3000/static/js/bundle.js:518804:5)
+    at Router (http://localhost:3000/static/js/bundle.js:518744:15)
+    at BrowserRouter (http://localhost:3000/static/js/bundle.js:517676:5)
+    at App (http://localhost:3000/static/js/bundle.js:3376:69)
+    at LocaleProvider (http://localhost:3000/static/js/bundle.js:351714:5)
+    at MotionWrapper (http://localhost:3000/static/js/bundle.js:338688:5)
+    at ProviderChildren (http://localhost:3000/static/js/bundle.js:339284:5)
+    at ConfigProvider (http://localhost:3000/static/js/bundle.js:339557:54)
+    at r (http://localhost:3000/static/js/bundle.js:511671:21)
+    at ApolloProvider (http://localhost:3000/static/js/bundle.js:553158:19)
+    at Provider (http://localhost:3000/static/js/bundle.js:515102:20) @ http://localhost:3000/static/js/bundle.js:522055
+[   10582ms] [LOG] Download the Apollo DevTools for a better development experience: %s https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm @ http://localhost:3000/static/js/bundle.js:553071

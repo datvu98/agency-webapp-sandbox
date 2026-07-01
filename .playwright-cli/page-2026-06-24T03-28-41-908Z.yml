@@ -1,0 +1,245 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - img [ref=e8]
+    - generic [ref=e11] [cursor=pointer]:
+      - generic [ref=e12]:
+        - img "avatar" [ref=e14]
+        - superscript [ref=e15]
+      - generic [ref=e16]: huy@upbase.vn
+  - generic [ref=e17]:
+    - complementary [ref=e18]:
+      - generic [ref=e19]:
+        - menu [ref=e20]:
+          - menuitem "line-chart Báo cáo" [ref=e21] [cursor=pointer]:
+            - img "line-chart" [ref=e22]:
+              - img [ref=e23]
+            - generic [ref=e25]: Báo cáo
+          - menuitem "login Kiểm kê" [ref=e26] [cursor=pointer]:
+            - img "login" [ref=e27]:
+              - img [ref=e28]
+            - generic [ref=e30]: Kiểm kê
+          - menuitem "shop Quản lý kho" [ref=e31] [cursor=pointer]:
+            - img "shop" [ref=e32]:
+              - img [ref=e33]
+            - generic [ref=e35]: Quản lý kho
+          - menuitem "login Vận hành nhập" [ref=e36] [cursor=pointer]:
+            - img "login" [ref=e37]:
+              - img [ref=e38]
+            - generic [ref=e40]: Vận hành nhập
+          - menuitem "logout Vận hành xuất" [ref=e41] [cursor=pointer]:
+            - img "logout" [ref=e42]:
+              - img [ref=e43]
+            - generic [ref=e45]: Vận hành xuất
+          - menuitem "setting Quản lý tài khoản" [ref=e46] [cursor=pointer]:
+            - img "setting" [ref=e47]:
+              - img [ref=e48]
+            - generic [ref=e50]: Quản lý tài khoản
+        - generic [ref=e51]:
+          - text: "Phiên bản:"
+          - strong
+        - button "menu-fold" [ref=e52] [cursor=pointer]:
+          - img "menu-fold" [ref=e54]:
+            - img [ref=e55]
+    - main [ref=e57]:
+      - generic [ref=e60]:
+        - generic [ref=e63]:
+          - generic [ref=e64] [cursor=pointer]:
+            - radio "Phiên bản 1"
+            - generic "Phiên bản 1" [ref=e65]
+          - generic [ref=e66] [cursor=pointer]:
+            - radio "Phiên bản 2"
+            - generic "Phiên bản 2" [ref=e67]
+          - generic [ref=e68] [cursor=pointer]:
+            - radio "Phiên bản 3" [checked] [active]
+            - generic "Phiên bản 3" [ref=e69]
+        - generic [ref=e169]:
+          - generic [ref=e172]:
+            - generic [ref=e174]:
+              - generic [ref=e175]: Thời gian
+              - generic [ref=e178]:
+                - textbox "Ngày bắt đầu" [ref=e180]: 26/05/2026 00:00
+                - generic "to" [ref=e182]:
+                  - img "swap-right" [ref=e183]:
+                    - img [ref=e184]
+                - textbox "Ngày kết thúc" [ref=e187]: 24/06/2026 23:59
+                - generic:
+                  - img "calendar":
+                    - img
+                - button "close-circle" [ref=e188] [cursor=pointer]:
+                  - img "close-circle" [ref=e189]:
+                    - img [ref=e190]
+            - generic [ref=e193]:
+              - generic [ref=e194]: UpS
+              - generic [ref=e197] [cursor=pointer]:
+                - generic [ref=e198]:
+                  - combobox [ref=e202]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e204]:
+              - generic [ref=e205]: Nguồn phát sinh
+              - generic [ref=e208] [cursor=pointer]:
+                - generic [ref=e209]:
+                  - combobox [ref=e213]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e215]:
+              - generic [ref=e216]: Sàn
+              - generic [ref=e219] [cursor=pointer]:
+                - generic [ref=e220]:
+                  - combobox [ref=e224]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e226]:
+              - generic [ref=e227]: Gian hàng
+              - generic [ref=e230] [cursor=pointer]:
+                - generic [ref=e231]:
+                  - combobox [ref=e235]
+                  - generic: Tất cả
+                - generic:
+                  - img:
+                    - img
+            - generic [ref=e237]:
+              - generic [ref=e238]: Trạng thái hợp đồng
+              - generic [ref=e241] [cursor=pointer]:
+                - generic [ref=e242]:
+                  - combobox [ref=e244]
+                  - generic "Đang hợp tác" [ref=e245]
+                - generic:
+                  - img:
+                    - img
+          - generic [ref=e249]:
+            - heading [level=3] [ref=e250]
+            - list [ref=e251]:
+              - listitem [ref=e252]
+              - listitem [ref=e253]
+              - listitem [ref=e254]
+              - listitem [ref=e255]
+              - listitem [ref=e256]
+              - listitem [ref=e257]
+              - listitem [ref=e258]
+              - listitem [ref=e259]
+          - generic [ref=e260]:
+            - generic [ref=e261]: Báo cáo chi tiết
+            - generic [ref=e263]:
+              - strong [ref=e266]: Số liệu chi tiết
+              - generic [ref=e273]:
+                - table [ref=e275]:
+                  - rowgroup [ref=e289]:
+                    - row "Thông tin gian hàng UpS GMV Sàn GMV nhà bán NMV (Doanh số hiệu quả) Đơn hàng Đơn hàng hiệu quả AOV Số đơn hủy Doanh số hủy nhà bán Số đơn hoàn Doanh số hoan nhà bán" [ref=e290]:
+                      - columnheader "Thông tin gian hàng" [ref=e291]
+                      - columnheader "UpS" [ref=e292] [cursor=pointer]:
+                        - generic [ref=e293]:
+                          - generic [ref=e294]: UpS
+                          - generic [ref=e296]:
+                            - img [ref=e297]:
+                              - img [ref=e298]
+                            - img [ref=e300]:
+                              - img [ref=e301]
+                      - columnheader "GMV Sàn" [ref=e303] [cursor=pointer]:
+                        - generic [ref=e304]:
+                          - generic [ref=e305]: GMV Sàn
+                          - generic [ref=e307]:
+                            - img [ref=e308]:
+                              - img [ref=e309]
+                            - img [ref=e311]:
+                              - img [ref=e312]
+                      - columnheader "GMV nhà bán" [ref=e314] [cursor=pointer]:
+                        - generic [ref=e315]:
+                          - generic [ref=e316]: GMV nhà bán
+                          - generic [ref=e318]:
+                            - img [ref=e319]:
+                              - img [ref=e320]
+                            - img [ref=e322]:
+                              - img [ref=e323]
+                      - columnheader "NMV (Doanh số hiệu quả)" [ref=e325] [cursor=pointer]:
+                        - generic [ref=e326]:
+                          - generic [ref=e327]: NMV (Doanh số hiệu quả)
+                          - generic [ref=e329]:
+                            - img [ref=e330]:
+                              - img [ref=e331]
+                            - img [ref=e333]:
+                              - img [ref=e334]
+                      - columnheader "Đơn hàng" [ref=e336] [cursor=pointer]:
+                        - generic [ref=e337]:
+                          - generic [ref=e338]: Đơn hàng
+                          - generic [ref=e340]:
+                            - img [ref=e341]:
+                              - img [ref=e342]
+                            - img [ref=e344]:
+                              - img [ref=e345]
+                      - columnheader "Đơn hàng hiệu quả" [ref=e347] [cursor=pointer]:
+                        - generic [ref=e348]:
+                          - generic [ref=e349]: Đơn hàng hiệu quả
+                          - generic [ref=e351]:
+                            - img [ref=e352]:
+                              - img [ref=e353]
+                            - img [ref=e355]:
+                              - img [ref=e356]
+                      - columnheader "AOV" [ref=e358] [cursor=pointer]:
+                        - generic [ref=e359]:
+                          - generic [ref=e360]: AOV
+                          - generic [ref=e362]:
+                            - img [ref=e363]:
+                              - img [ref=e364]
+                            - img [ref=e366]:
+                              - img [ref=e367]
+                      - columnheader "Số đơn hủy" [ref=e369] [cursor=pointer]:
+                        - generic [ref=e370]:
+                          - generic [ref=e371]: Số đơn hủy
+                          - generic [ref=e373]:
+                            - img [ref=e374]:
+                              - img [ref=e375]
+                            - img [ref=e377]:
+                              - img [ref=e378]
+                      - columnheader "Doanh số hủy nhà bán" [ref=e380] [cursor=pointer]:
+                        - generic [ref=e381]:
+                          - generic [ref=e382]: Doanh số hủy nhà bán
+                          - generic [ref=e384]:
+                            - img [ref=e385]:
+                              - img [ref=e386]
+                            - img [ref=e388]:
+                              - img [ref=e389]
+                      - columnheader "Số đơn hoàn" [ref=e391] [cursor=pointer]:
+                        - generic [ref=e392]:
+                          - generic [ref=e393]: Số đơn hoàn
+                          - generic [ref=e395]:
+                            - img [ref=e396]:
+                              - img [ref=e397]
+                            - img [ref=e399]:
+                              - img [ref=e400]
+                      - columnheader "Doanh số hoan nhà bán" [ref=e402] [cursor=pointer]:
+                        - generic [ref=e403]:
+                          - generic [ref=e404]: Doanh số hoan nhà bán
+                          - generic [ref=e406]:
+                            - img [ref=e407]:
+                              - img [ref=e408]
+                            - img [ref=e410]:
+                              - img [ref=e411]
+                - table [ref=e414]:
+                  - rowgroup [ref=e428]:
+                    - row "Trống" [ref=e429]:
+                      - cell "Trống" [ref=e430]:
+                        - generic [ref=e432]:
+                          - img [ref=e434]
+                          - generic [ref=e440]: Trống
+                - table [ref=e442]:
+                  - rowgroup [ref=e456]:
+                    - row "Tổng (1 gian hàng) 1 UpS 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00" [ref=e457]:
+                      - cell "Tổng (1 gian hàng)" [ref=e458]
+                      - cell "1 UpS" [ref=e459]
+                      - cell "0.00" [ref=e460]
+                      - cell "0.00" [ref=e461]
+                      - cell "0.00" [ref=e462]
+                      - cell "0.00" [ref=e463]
+                      - cell "0.00" [ref=e464]
+                      - cell "0.00" [ref=e465]
+                      - cell "0.00" [ref=e466]
+                      - cell "0.00" [ref=e467]
+                      - cell "0.00" [ref=e468]
+                      - cell "0.00" [ref=e469]

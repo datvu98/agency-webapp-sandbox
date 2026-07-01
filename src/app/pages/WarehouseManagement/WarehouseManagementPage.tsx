@@ -11,6 +11,7 @@ import WarehouseCreate from "./WarehouseCreate";
 import WarehouseUpdate from "./WarehouseUpdate";
 import HistoryExport from "./HistoryExport";
 import ProcessingList from "./ProcessingList";
+import ProcessingListTest from "./ProcessingListTest";
 import ProcessingCreate from "./ProcessingCreate";
 import ProcessingDetail from "./ProcessingDetail";
 import WarehouseBillInList from "./WarehouseBillInList";
@@ -388,6 +389,14 @@ export const OutboundManagementPage = () => {
 				element={
 					<LayoutWarehouse>
 						<HandOverDetail />
+					</LayoutWarehouse>
+				}
+			/>
+			<Route
+				path={"processing-list-test"}
+				element={
+					<LayoutWarehouse>
+						<ProcessingListTest />
 					</LayoutWarehouse>
 				}
 			/>
