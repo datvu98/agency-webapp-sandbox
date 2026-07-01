@@ -11,7 +11,7 @@ interface Props {
     containerRef: React.Ref<any>;
 }
 
-const ReportOverviewV1 = ({ lineChartData, loadingLineChart, isVisible, containerRef }: Props) => (
+const ReportOverview = ({ lineChartData, loadingLineChart, isVisible, containerRef }: Props) => (
     <>
         <div ref={containerRef} />
         <Card className="card-filter">
@@ -31,4 +31,4 @@ const ReportOverviewV1 = ({ lineChartData, loadingLineChart, isVisible, containe
     </>
 );
 
-export default ReportOverviewV1;
+export default ReportOverview;
