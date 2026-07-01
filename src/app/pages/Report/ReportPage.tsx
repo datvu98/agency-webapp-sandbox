@@ -6,6 +6,8 @@ import { ReportProvider } from "app/contexts/ReportContext";
 import ReportOverview from "./ReportOverview";
 import { FullfillmentProvider } from "app/contexts/FullfillmentContext";
 import FullfillmentReport from "../Fullfillment/FullfillmentReport";
+import ConversionBillListPage from "./ConversionBills";
+import ConversionBillDetailPage from "./ConversionBills/ConversionBillDetailPage";
 
 export const ReportPage = () => {
     return (
@@ -27,6 +29,8 @@ export const ReportPage = () => {
                     </FullfillmentProvider>
                 }
             />
+            <Route path={"conversion-bills"} element={<ConversionBillListPage />} />
+            <Route path={"conversion-bills/:bill_code"} element={<ConversionBillDetailPage />} />
         </Routes>
     );
 }

@@ -226,6 +226,11 @@ const MenuLayout = () => {
 						label: "Báo cáo hạn SLA",
 						link: "/report/fullfillment-report",
 					},
+					{
+						key: "report/conversion-bills",
+						label: "Báo cáo chuyển đổi",
+						link: "/report/conversion-bills",
+					},
 				],
 			},
 			{
