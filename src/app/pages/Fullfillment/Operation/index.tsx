@@ -5,6 +5,7 @@ import queryString from "querystring";
 import { useLazyQuery, useQuery } from "@apollo/client";
 import { useLocation, useNavigate } from "react-router-dom";
 import dayjs from "dayjs";
+import { usePostHog } from '@posthog/react';
 
 import { useLayoutContext } from "app/contexts/LayoutContext";
 import { useFullfillmentContext } from "app/contexts/FullfillmentContext";
@@ -38,6 +39,7 @@ const ReportOverview = () => {
 	const location =  useLocation()
 	const params = queryString.parse(location.search.slice(1, 100000)) as any;
 	const navigate = useNavigate();
+	const posthog = usePostHog();
 
 	const { optionsStore, loadingStores } = useFullfillmentContext();
 	const connector_channel_code = useMemo(() => {
@@ -127,6 +129,7 @@ const ReportOverview = () => {
 		]);
 	}, []);
 	const onChange = (key: string) => {
+		posthog?.capture('fulfillment_tab_changed', { tab: key });
 		navigate(`${location.pathname}?${queryString.stringify({ tab: key }).replaceAll("%2C", ",")}`);
 	};
 

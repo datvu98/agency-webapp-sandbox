@@ -5,6 +5,7 @@ import React, { useCallback, useLayoutEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { showAlert } from "utils/helper";
 import { useLocation, useNavigate } from "react-router-dom";
+import { usePostHog } from '@posthog/react';
 import { useSelector } from "react-redux";
 import { selectGlobalSlice } from "app/slice/selectors";
 import queryString from "querystring";
@@ -27,6 +28,7 @@ const HandOverList = () => {
 	const { appendBreadcrumb } = useLayoutContext();
 	const navigate = useNavigate();
 	const location = useLocation();
+	const posthog = usePostHog();
 	const { user } = useSelector(selectGlobalSlice);
 	const params = queryString.parse(location.search.slice(1, 100000)) as any;
 	const [dataTable, setDataTable] = useState([])
@@ -202,6 +204,7 @@ const HandOverList = () => {
 			<Spin spinning={loadingAgencyGetSubUsers}>
 				<Tabs
 					onChange={(key) => {
+						posthog?.capture('handover_tab_changed', { tab: key });
 						navigate(`${location.pathname}?${queryString.stringify({
 							tab: key,
 						})}`);

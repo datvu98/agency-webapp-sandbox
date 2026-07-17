@@ -39,6 +39,7 @@ import ChatFilters from "./components/ChatFilters";
 import type { RadioChangeEvent } from 'antd';
 import { Radio } from "antd";
 import sortIcon from '../../../../assets/sort-icon.svg'
+import { usePostHog } from '@posthog/react';
 
 dayjs.extend(relativeTime);
 dayjs.extend(updateLocale)
@@ -75,6 +76,7 @@ export default (({ onShowExpand }) => {
     const { actions } = useChatSliceSlice();
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const posthog = usePostHog();
     const currentConversation = useSelector(selectCurrentConverstation);
     const conversations = useSelector(selectConversations);
     const params = queryString.parse(location.search.slice(1, 100000)) as any;
@@ -266,6 +268,7 @@ export default (({ onShowExpand }) => {
     }, [hasMore, page, contentConversationHeight, variables]);
 
     const onSearch: SearchProps['onSearch'] = (value) => {
+        posthog?.capture('conversation_searched');
         navigate(`/chats?${queryString.stringify({
             ...params,
             q: value,
@@ -277,6 +280,7 @@ export default (({ onShowExpand }) => {
             variables: { conversationIds: [item?.id] }
         });
         if (currentConversation?.id != item?.id) {
+            posthog?.capture('conversation_selected');
             setCurrentTab('1');
             setRefCurrentUserId(item?.customer?.ref_id);
             setCurrentSegmented('customer');

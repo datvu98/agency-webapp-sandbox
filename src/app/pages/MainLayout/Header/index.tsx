@@ -17,12 +17,14 @@ import mutate_chatNotificationUnregisterDevice from 'graphql/mutations/mutate_ch
 import AuthorizationWrapper from 'app/components/AuthorizationWrapper';
 import client from "../../../../apollo";
 import { useChatSliceSlice } from 'app/pages/ChatPage/slice';
+import { usePostHog } from '@posthog/react';
 
 const MenuHeaderDropdown = () => {
     const { actions } = useGlobalSliceSlice();
     const { actions: actionChats } = useChatSliceSlice()
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const posthog = usePostHog();
 
     const [chatNotificationUnregisterDevice] = useMutation(mutate_chatNotificationUnregisterDevice);
 
@@ -38,6 +40,8 @@ const MenuHeaderDropdown = () => {
                             },
                         })
                     }
+                    posthog?.capture('user_logged_out');
+                    posthog?.reset();
                     localStorage.removeItem('accessToken')
                     localStorage.removeItem('refresh_token')
                     localStorage.removeItem('user')

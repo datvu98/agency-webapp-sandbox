@@ -10,6 +10,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'antd/dist/reset.css';
+import { usePostHog } from '@posthog/react';
 
 import { GlobalStyle } from 'styles/global-styles';
 
@@ -37,7 +38,8 @@ export function App() {
   const { i18n } = useTranslation();
   const { actions } = useGlobalSliceSlice()
   const dispatch = useDispatch()
-  const { inited } = useSelector(selectGlobalSlice)
+  const { inited, user } = useSelector(selectGlobalSlice)
+  const posthog = usePostHog();
 
   React.useEffect(() => {
     dispatch(actions.saveUser({
@@ -48,6 +50,16 @@ export function App() {
       email: localStorage.getItem('email'),
     }))
   }, [])
+
+  React.useEffect(() => {
+    if (inited && user?.id) {
+      posthog?.identify(String(user.id), {
+        email: user.email,
+        name: user.full_name,
+        category_code: user.category_code,
+      });
+    }
+  }, [inited, user?.id])
 
 
   if (!inited) {
