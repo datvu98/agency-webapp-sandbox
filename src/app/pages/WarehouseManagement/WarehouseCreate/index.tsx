@@ -5,6 +5,7 @@ import React, { useCallback, useLayoutEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { showAlert } from "utils/helper";
 import { useNavigate } from "react-router-dom";
+import { usePostHog } from '@posthog/react';
 import { useSelector } from "react-redux";
 import { selectGlobalSlice } from "app/slice/selectors";
 import { WarehouseListWraper } from "../Warehouse.styles";
@@ -20,6 +21,7 @@ const { Text } = Typography;
 const WarehouseCreate = () => {
 	const { appendBreadcrumb } = useLayoutContext();
 	const navigate = useNavigate();
+	const posthog = usePostHog();
 	const [form] = Form.useForm();
 
 	const [scanWarehouse, setScanWarehouse] = useState<number>(2);
@@ -67,6 +69,7 @@ const WarehouseCreate = () => {
 					variables: { userCreateWarehouseInput },
 				});
 				if (data?.userCreateWarehouseByAgency?.success) {
+					posthog?.capture('warehouse_created');
 					showAlert.success("Thêm kho thành công");
 					navigate("/warehouse-manage/warehouse-list");
 					return;

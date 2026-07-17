@@ -5,6 +5,7 @@ import _ from "lodash";
 import { omitBy } from "lodash";
 import { showAlert } from "utils/helper";
 import { useNavigate } from "react-router-dom";
+import { usePostHog } from '@posthog/react';
 import { Button, Col, DatePicker, Flex, Modal, Row, Select, Space, Spin, Tooltip, Typography } from "antd";
 import { useSettlementContext } from "app/contexts/SettlementContext";
 import query_cfExportSettlementAggregate from "graphql/queries/query_cfExportSettlementAggregate";
@@ -32,6 +33,7 @@ const { RangePicker } = DatePicker;
 const { Text } = Typography;
 
 function ExportFileDialog({ status, show, onHide, params }) {
+    const posthog = usePostHog();
 
     const PENDING = 1
     const PROCESSED = 2
@@ -169,6 +171,10 @@ function ExportFileDialog({ status, show, onHide, params }) {
             },
             onCompleted: (data) => {
                 if (!!data?.cfExportOrderSettlement?.job_tracking_export) {
+                    posthog?.capture('settlement_export_succeeded', {
+                        settlement_status: status,
+                        order_count: +data?.cfExportSettlementAggregate?.count || 0,
+                    });
                     showAlert.success(data?.cfExportOrderSettlement.message || '');
                     onHide()
                     if (status == 'PENDING') {
@@ -244,7 +250,13 @@ function ExportFileDialog({ status, show, onHide, params }) {
                     </Button>
                     <Button
                         type="primary"
-                        onClick={() => cfExportOrderSettlement()}
+                        onClick={() => {
+                            posthog?.capture('settlement_export_confirmed', {
+                                settlement_status: status,
+                                order_count: +data?.cfExportSettlementAggregate?.count || 0,
+                            });
+                            cfExportOrderSettlement();
+                        }}
                         color="#ff5629"
                         style={{ height: 40, fontSize: 14, width: 100, color: 'white', opacity: loading || !+data?.cfExportSettlementAggregate?.count ? '0.6' : '1', backgroundColor: "#ff5629" }}
                         disabled={loading || !+data?.cfExportSettlementAggregate?.count}

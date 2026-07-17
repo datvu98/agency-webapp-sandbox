@@ -8,6 +8,9 @@
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 
+import posthog from 'posthog-js';
+import { PostHogErrorBoundary, PostHogProvider } from '@posthog/react';
+
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
@@ -50,6 +53,11 @@ moment.updateLocale('vi', {
 });
 dayjs.locale("vi");
 
+posthog.init(process.env.REACT_APP_POSTHOG_TOKEN as string, {
+  api_host: process.env.REACT_APP_POSTHOG_HOST,
+  defaults: '2026-01-30',
+});
+
 if (process.env.NODE_ENV === "production") {
   console.log = function no_console() { };
 }
@@ -64,34 +72,38 @@ const root = ReactDOM.createRoot(
 console.log(`THIEN CHECKED`)
 
 root.render(
-  <Provider store={store}>
-    {/* <PersistGate loading={null} persistor={persistor}> */}
-    <ApolloProvider client={client}>
-      <HelmetProvider>
-        <ConfigProvider
-          locale={locale}
-          theme={{
-            token: {
-              colorPrimary: '#ff5629',
-            }
-          }}
-        >
-          <App />
-          <ToastContainer
-            position="top-right"
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
-        </ConfigProvider>
-      </HelmetProvider>
-    </ApolloProvider>
-    {/* </PersistGate> */}
-  </Provider>
+  <PostHogProvider client={posthog}>
+    <PostHogErrorBoundary>
+      <Provider store={store}>
+        {/* <PersistGate loading={null} persistor={persistor}> */}
+        <ApolloProvider client={client}>
+          <HelmetProvider>
+            <ConfigProvider
+              locale={locale}
+              theme={{
+                token: {
+                  colorPrimary: '#ff5629',
+                }
+              }}
+            >
+              <App />
+              <ToastContainer
+                position="top-right"
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+              />
+            </ConfigProvider>
+          </HelmetProvider>
+        </ApolloProvider>
+        {/* </PersistGate> */}
+      </Provider>
+    </PostHogErrorBoundary>
+  </PostHogProvider>
 );
 
 // Hot reloadable translation json files

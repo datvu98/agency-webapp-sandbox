@@ -21,6 +21,7 @@ import client from 'apollo';
 import query_user from 'graphql/queries/query_user';
 import { error } from 'console';
 import { Link } from 'react-router-dom';
+import { usePostHog } from '@posthog/react';
 
 const { Text } = Typography;
 const key_login = 'login';
@@ -35,6 +36,7 @@ const Login = () => {
     const dispatch = useDispatch()
     const [isChecked, onChangeRemember] = useState(JSON.parse(localStorage.getItem('isChecked') || 'false'))
 
+    const posthog = usePostHog();
     const [mutate, { loading }] = useMutation(mutate_agencyUserLogin)
     const [mutateSubUserLogin, { loading: loadingSubUserLogin }] = useMutation(mutate_agencySubUserLogin)
     //useMutation(login)
@@ -94,8 +96,16 @@ const Login = () => {
                         dispatch(actions.saveUser({
                             user: dataUser?.agencyMe
                         }))
+                        const me = dataUser.agencyMe;
+                        posthog?.identify(String(me.id), {
+                            email: me.email,
+                            name: me.full_name,
+                            category_code: me.category_code,
+                        });
+                        posthog?.capture('user_logged_in', { login_type: 'agency' });
                     };
                 } else {
+                    posthog?.capture('login_failed', { login_type: 'agency' });
                     showAlert.error(data?.agencyUserLogin?.message || "Đăng nhập không thành công.");
                 }
             } else {
@@ -136,9 +146,17 @@ const Login = () => {
                         dispatch(actions.saveUser({
                             user: dataUser?.agencyMe
                         }))
+                        const me = dataUser.agencyMe;
+                        posthog?.identify(String(me.id), {
+                            email: me.email,
+                            name: me.full_name,
+                            category_code: me.category_code,
+                        });
+                        posthog?.capture('sub_user_logged_in', { login_type: 'sub-user' });
                     };
 
                 } else {
+                    posthog?.capture('login_failed', { login_type: 'sub-user' });
                     showAlert.error(data?.agencySubUserLogin?.message || "Đăng nhập tài khoản phụ không thành công.");
                 }
             }
